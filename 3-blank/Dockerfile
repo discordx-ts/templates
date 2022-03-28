@@ -1,5 +1,5 @@
 ## build runner
-FROM node as build-runner
+FROM node:lts-alpine as build-runner
 
 # Set temp directory
 WORKDIR /tmp/app
