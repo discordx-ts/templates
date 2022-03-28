@@ -1,16 +1,36 @@
-FROM node
+## build runner
+FROM node as build-runner
 
-# Create app directory
-WORKDIR /app
+# Set temp directory
+WORKDIR /tmp/app
 
-# Move all files
-COPY . .
+# Move package.json
+COPY package.json .
 
-# RUN npm install
+# Install dependencies
 RUN npm install
+
+# Move source files
+COPY src ./src
+COPY tsconfig.json   .
 
 # Build project
 RUN npm run build
+
+## producation runner
+FROM node:lts-alpine as prod-runner
+
+# Set work directory
+WORKDIR /app
+
+# Copy package.json from build-runner
+COPY --from=build-runner /tmp/app/package.json /app/package.json
+
+# Install dependencies
+RUN npm install --only=production
+
+# Move build files
+COPY --from=build-runner /tmp/app/build /app/build
 
 # Start bot
 CMD [ "node", "build/main.js" ]
