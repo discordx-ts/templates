@@ -1,10 +1,10 @@
 FROM node
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Move all files
-COPY . /usr/src/app/
+COPY . .
 
 # RUN npm install
 RUN npm install
