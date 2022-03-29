@@ -15,7 +15,7 @@
     "@discordx/importer": "^1.1.2",
     "@discordx/pagination": "^2.0.1",
     "discord.js": "^13.6.0",
-    "discordx": "^9.4.3",
+    "discordx": "^9.4.4",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
