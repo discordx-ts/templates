@@ -1,14 +1,8 @@
 import { CommandInteraction } from "discord.js";
 import { Discord, Slash, SlashOption, SlashChoice } from "discordx";
 
-enum TextChoices {
-  // WhatDiscordShows = value
-  Hello = "Hello",
-  "Good Bye" = "GoodBye",
-}
-
 @Discord()
-class choicesExample {
+class Example {
   @Slash("choose")
   async choose(
     @SlashChoice("Human", "human")
@@ -23,8 +17,8 @@ class choicesExample {
 
   @Slash("choice")
   async choice(
-    @SlashChoice(TextChoices)
-    @SlashChoice("How are you", "question")
+    @SlashChoice({ name: "are you good?", value: "good" })
+    @SlashChoice({ name: "are you okay?", value: "okay" })
     @SlashOption("text")
     what: string,
     interaction: CommandInteraction
