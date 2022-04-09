@@ -1,0 +1,30 @@
+version: "3"
+
+networks:
+  discordx-network:
+    name: discordx-network
+
+services:
+  lavalink:
+    build:
+      context: .
+      dockerfile: Dockerfile-Lavalink
+    expose:
+      - 2333
+      - 2333/udp
+    networks:
+      - discordx-network
+
+  app:
+    depends_on:
+      - lavalink
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - LAVA_HOST=lavalink
+      - LAVA_PORT=2333
+    networks:
+      - discordx-network
+    command: node build/main.js

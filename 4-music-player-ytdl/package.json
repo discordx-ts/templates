@@ -1,0 +1,49 @@
+{
+  "name": "discord-music-bot",
+  "version": "2.0.0",
+  "description": "Example of music bot with discordx",
+  "main": "build/client.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader ts-node/esm/transpile-only src/client.ts",
+    "start": "nodemon --exec node --loader ts-node/esm/transpile-only src/client.ts",
+    "serve": "node build/client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oceanroleplay/discord-music-bot.git"
+  },
+  "keywords": [
+    "discordx",
+    "discord.ts",
+    "discord.js",
+    "bot",
+    "discord",
+    "typescript"
+  ],
+  "author": "Harry <indianoceanroleplay@gmail.com> [https://github.com/oceanroleplay]",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oceanroleplay/discord-music-bot/issues"
+  },
+  "homepage": "https://github.com/oceanroleplay/discord-music-bot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/voice": "^0.8.0",
+    "@discordx/importer": "^1.1.2",
+    "@discordx/music": "^3.1.9",
+    "@discordx/pagination": "^2.0.0",
+    "discord.js": "^13.6.0",
+    "discordx": "^9.3.1",
+    "ffmpeg-static": "^4.4.1",
+    "libsodium-wrappers": "^0.7.9",
+    "reflect-metadata": "^0.1.13"
+  }
+}
