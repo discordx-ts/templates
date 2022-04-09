@@ -4,9 +4,12 @@ import { Client } from "discordx";
 import { dirname, importx } from "@discordx/importer";
 
 export const client = new Client({
+  // configuration for @SimpleCommand
   simpleCommand: {
     prefix: "!",
   },
+
+  // discord intents
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MEMBERS,
@@ -14,8 +17,12 @@ export const client = new Client({
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
     Intents.FLAGS.GUILD_VOICE_STATES,
   ],
-  // If you only want to use global commands only, comment this line
+
+  // To only use global commands (use @Guild for specific guild command), comment this line
   botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
+
+  // Debug logs are disabled in silent mode
+  silent: false,
 });
 
 client.once("ready", async () => {
