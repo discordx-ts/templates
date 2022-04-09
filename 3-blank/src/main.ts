@@ -4,12 +4,12 @@ import { Client } from "discordx";
 import { dirname, importx } from "@discordx/importer";
 
 export const client = new Client({
-  // configuration for @SimpleCommand
+  // Configuration for @SimpleCommand
   simpleCommand: {
     prefix: "!",
   },
 
-  // discord intents
+  // Discord intents
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MEMBERS,
@@ -26,20 +26,19 @@ export const client = new Client({
 });
 
 client.once("ready", async () => {
-  // make sure all guilds are in cache
+  // Make sure all guilds are cached
   await client.guilds.fetch();
 
-  // init all application commands
-  await client.initApplicationCommands({
-    guild: { log: true },
-    global: { log: true },
-  });
+  // Synchronize applications commands with Discord
+  await client.initApplicationCommands();
 
-  // init permissions; enabled log to see changes
-  await client.initApplicationPermissions(true);
+  // Synchronize applications command permissions with Discord
+  await client.initApplicationPermissions();
 
-  // uncomment this line to clear all guild commands,
-  // useful when moving to global commands from guild commands
+  // To clear all guild commands, uncomment this line,
+  // This is useful when moving from guild commands to global commands
+  // It must only be executed once
+  //
   //  await client.clearApplicationCommands(
   //    ...client.guilds.cache.map((g) => g.id)
   //  );
@@ -56,19 +55,20 @@ client.on("messageCreate", (message: Message) => {
 });
 
 async function run() {
-  // with cjs
+  // The following syntax should be used in the commonjs environment
+  //
   // await importx(__dirname + "/{events,commands}/**/*.{ts,js}");
-  // with ems
-  await importx(
-    dirname(import.meta.url) + "/{events,commands,api}/**/*.{ts,js}"
-  );
 
-  // let's start the bot
+  // The following syntax should be used in the ECMAScript environment
+  await importx(dirname(import.meta.url) + "/{events,commands}/**/*.{ts,js}");
+
+  // Let's start the bot
   if (!process.env.BOT_TOKEN) {
     throw Error("Could not find BOT_TOKEN in your environment");
   }
 
-  await client.login(process.env.BOT_TOKEN); // provide your bot token
+  // Log in with your bot token
+  await client.login(process.env.BOT_TOKEN);
 }
 
 run();
