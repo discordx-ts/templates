@@ -1,10 +1,11 @@
-import { CommandInteraction } from "discord.js";
-import { Discord, Slash, SlashOption, SlashChoice } from "discordx";
+import type { CommandInteraction } from "discord.js";
+import { Discord, Slash, SlashChoice, SlashOption } from "discordx";
 
 @Discord()
-class choicesExample {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class Example {
   @Slash("choose")
-  async choose(
+  choose(
     @SlashChoice("Human", "Astronaut", "Dev")
     @SlashOption("what", { description: "What are you?" })
     what: string,
@@ -14,7 +15,7 @@ class choicesExample {
   }
 
   @Slash("choice")
-  async choice(
+  choice(
     @SlashChoice({ name: "are you okay?", value: "okay" })
     @SlashChoice({ name: "are you good?", value: "good" })
     @SlashOption("text")

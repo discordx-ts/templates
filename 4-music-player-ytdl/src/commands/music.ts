@@ -1,3 +1,9 @@
+import { Player, Queue } from "@discordx/music";
+import {
+  Pagination,
+  PaginationResolver,
+  PaginationType,
+} from "@discordx/pagination";
 import type {
   Client,
   CommandInteraction,
@@ -11,12 +17,6 @@ import {
   MessageButton,
   MessageEmbed,
 } from "discord.js";
-import {
-  Pagination,
-  PaginationResolver,
-  PaginationType,
-} from "@discordx/pagination";
-import { Player, Queue } from "@discordx/music";
 
 export class MyQueue extends Queue {
   lastControlMessage?: Message;
@@ -160,9 +160,9 @@ export class MyQueue extends Queue {
     );
 
     const progressBarOptions = {
-      size: 15,
       arrow: "🔘",
       block: "━",
+      size: 15,
     };
 
     if (currentTrack.metadata.isYoutubeTrack()) {
@@ -199,9 +199,9 @@ export class MyQueue extends Queue {
     );
 
     const pMsg = {
+      components: [...this.controlsRow()],
       content: options?.text,
       embeds: [embed],
-      components: [...this.controlsRow()],
     };
 
     if (!this.isReady && this.lastControlMessage) {
@@ -291,11 +291,11 @@ export class MyQueue extends Queue {
           message.delete();
         }
       },
+      time: 6e4,
       type:
         Math.round(this.size / 10) <= 5
           ? PaginationType.Button
           : PaginationType.SelectMenu,
-      time: 6e4,
     }).send();
   }
 }

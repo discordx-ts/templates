@@ -1,15 +1,15 @@
-import {
+import type {
   ButtonInteraction,
   CommandInteraction,
-  MessageButton,
-  MessageActionRow,
-  User,
   GuildMember,
+  User,
 } from "discord.js";
+import { MessageActionRow, MessageButton } from "discord.js";
 import { ButtonComponent, Discord, Slash, SlashOption } from "discordx";
 
 @Discord()
-class buttonExample {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class Example {
   @Slash("hello-btn")
   async hello(
     @SlashOption("user", { type: "USER" })
@@ -27,8 +27,8 @@ class buttonExample {
     const row = new MessageActionRow().addComponents(helloBtn);
 
     interaction.editReply({
-      content: `${user}, Say hello to bot`,
       components: [row],
+      content: `${user}, Say hello to bot`,
     });
   }
 

@@ -1,54 +1,76 @@
 import "reflect-metadata";
-import { Intents, Interaction, Message } from "discord.js";
-import { Client } from "discordx";
-import { dirname, importx } from "@discordx/importer";
 
-export const client = new Client({
-  simpleCommand: {
-    prefix: "!",
-  },
+import { dirname, importx } from "@discordx/importer";
+import type { Interaction, Message } from "discord.js";
+import { Intents } from "discord.js";
+import { Client } from "discordx";
+
+export const bot = new Client({
+  // To only use global commands (use @Guild for specific guild command), comment this line
+  botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
+
+  // Discord intents
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
     Intents.FLAGS.GUILD_VOICE_STATES,
   ],
-  // If you only want to use global commands only, comment this line
-  botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
+
+  // Debug logs are disabled in silent mode
+  silent: false,
+
+  // Configuration for @SimpleCommand
+  simpleCommand: {
+    prefix: "!",
+  },
 });
 
-client.once("ready", async () => {
-  // make sure all guilds are in cache
-  await client.guilds.fetch();
+bot.once("ready", async () => {
+  // Make sure all guilds are cached
+  await bot.guilds.fetch();
 
-  // init all application commands
-  await client.initApplicationCommands({
-    guild: { log: true },
-    global: { log: true },
-  });
+  // Synchronize applications commands with Discord
+  await bot.initApplicationCommands();
 
-  // init permissions; enabled log to see changes
-  await client.initApplicationPermissions(true);
+  // Synchronize applications command permissions with Discord
+  await bot.initApplicationPermissions();
+
+  // To clear all guild commands, uncomment this line,
+  // This is useful when moving from guild commands to global commands
+  // It must only be executed once
+  //
+  //  await bot.clearApplicationCommands(
+  //    ...bot.guilds.cache.map((g) => g.id)
+  //  );
 
   console.log("Bot started");
 });
 
-client.on("interactionCreate", (interaction: Interaction) => {
-  client.executeInteraction(interaction);
+bot.on("interactionCreate", (interaction: Interaction) => {
+  bot.executeInteraction(interaction);
 });
 
-client.on("messageCreate", (message: Message) => {
-  client.executeCommand(message);
+bot.on("messageCreate", (message: Message) => {
+  bot.executeCommand(message);
 });
 
 async function run() {
-  await importx(dirname(import.meta.url) + "/commands/**/*.{ts,js}");
+  // The following syntax should be used in the commonjs environment
+  //
+  // await importx(__dirname + "/{events,commands}/**/*.{ts,js}");
 
-  // let's start the bot
+  // The following syntax should be used in the ECMAScript environment
+  await importx(dirname(import.meta.url) + "/{events,commands}/**/*.{ts,js}");
+
+  // Let's start the bot
   if (!process.env.BOT_TOKEN) {
     throw Error("Could not find BOT_TOKEN in your environment");
   }
 
-  await client.login(process.env.BOT_TOKEN); // provide your bot token
+  // Log in with your bot token
+  await bot.login(process.env.BOT_TOKEN);
 }
 
 run();

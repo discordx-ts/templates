@@ -1,10 +1,11 @@
-import { CommandInteraction } from "discord.js";
+import type { CommandInteraction } from "discord.js";
 import { Discord, Slash } from "discordx";
 
 @Discord()
-export abstract class SlashExample {
-  @Slash("ping")
-  async ping(interaction: CommandInteraction): Promise<void> {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class Example {
+  @Slash()
+  ping(interaction: CommandInteraction): void {
     interaction.reply("pong!");
   }
 }

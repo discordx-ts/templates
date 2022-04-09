@@ -1,15 +1,16 @@
-import { CommandInteraction, Message } from "discord.js";
+import type { CommandInteraction, Message } from "discord.js";
+import type { SimpleCommandMessage } from "discordx";
 import {
   Discord,
   SimpleCommand,
-  SimpleCommandMessage,
   SimpleCommandOption,
   SimpleCommandOptionType,
   Slash,
 } from "discordx";
 
 @Discord()
-class simpleCommandExample {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class Example {
   @SimpleCommand("hello", { aliases: ["hi"] })
   hello(command: SimpleCommandMessage) {
     command.message.reply(`👋 ${command.message.member}`);
@@ -31,7 +32,7 @@ class simpleCommandExample {
 
   // make single handler for simple and slash command
   likeIt(command: CommandInteraction | Message) {
-    command.reply(`I like it, Thanks`);
+    command.reply("I like it, Thanks");
   }
 
   @SimpleCommand("like-it")

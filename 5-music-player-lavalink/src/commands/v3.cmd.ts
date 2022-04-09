@@ -1,4 +1,5 @@
 import * as Lava from "@discordx/lava-player";
+import { Player } from "@discordx/lava-queue";
 import type { ButtonInteraction, CommandInteraction } from "discord.js";
 import { GuildMember, MessageEmbed } from "discord.js";
 import type { ArgsOf, Client } from "discordx";
@@ -11,7 +12,6 @@ import {
   SlashOption,
 } from "discordx";
 
-import { Player } from "@discordx/lava-queue";
 import { getNode } from "./node.js";
 import { MusicQueue } from "./queue.js";
 

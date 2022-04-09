@@ -1,15 +1,16 @@
-import { ContextMenuInteraction } from "discord.js";
-import { Discord, ContextMenu } from "discordx";
+import type { ContextMenuInteraction } from "discord.js";
+import { ContextMenu, Discord } from "discordx";
 
 @Discord()
-export abstract class contextTest {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class Example {
   @ContextMenu("MESSAGE", "message context")
-  async messageHandler(interaction: ContextMenuInteraction) {
+  messageHandler(interaction: ContextMenuInteraction) {
     interaction.reply("I am user context handler");
   }
 
   @ContextMenu("USER", "user context")
-  async userHandler(interaction: ContextMenuInteraction) {
+  userHandler(interaction: ContextMenuInteraction) {
     interaction.reply("I am user context handler");
   }
 }

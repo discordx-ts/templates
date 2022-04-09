@@ -1,14 +1,16 @@
-import { CommandInteraction, MessageEmbed } from "discord.js";
-import { Discord, MetadataStorage, Slash } from "discordx";
 import { Pagination } from "@discordx/pagination";
+import type { CommandInteraction } from "discord.js";
+import { MessageEmbed } from "discord.js";
+import { Discord, MetadataStorage, Slash } from "discordx";
 
 @Discord()
-export abstract class SlashExample {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class SlashExample {
   // example: pagination for all slash command
   @Slash("all-commands", { description: "Pagination for all slash command" })
   async pages(interaction: CommandInteraction): Promise<void> {
     const commands = MetadataStorage.instance.applicationCommands.map((cmd) => {
-      return { name: cmd.name, description: cmd.description };
+      return { description: cmd.description, name: cmd.name };
     });
 
     const pages = commands.map((cmd, i) => {

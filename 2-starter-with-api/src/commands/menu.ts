@@ -1,10 +1,6 @@
-import {
-  CommandInteraction,
-  MessageActionRow,
-  SelectMenuInteraction,
-  MessageSelectMenu,
-} from "discord.js";
-import { Discord, Slash, SelectMenuComponent } from "discordx";
+import type { CommandInteraction, SelectMenuInteraction } from "discord.js";
+import { MessageActionRow, MessageSelectMenu } from "discord.js";
+import { Discord, SelectMenuComponent, Slash } from "discordx";
 
 const roles = [
   { label: "Principal", value: "principal" },
@@ -13,7 +9,8 @@ const roles = [
 ];
 
 @Discord()
-export abstract class buttons {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class buttons {
   @SelectMenuComponent("role-menu")
   async handle(interaction: SelectMenuInteraction): Promise<unknown> {
     await interaction.deferReply();
@@ -23,7 +20,7 @@ export abstract class buttons {
 
     // if value not found
     if (!roleValue) {
-      return await interaction.followUp("invalid role id, select again");
+      return interaction.followUp("invalid role id, select again");
     }
 
     await interaction.followUp(
@@ -48,8 +45,8 @@ export abstract class buttons {
 
     // send it
     interaction.editReply({
-      content: "select your role!",
       components: [buttonRow],
+      content: "select your role!",
     });
     return;
   }

@@ -1,14 +1,14 @@
 import "reflect-metadata";
-import { Intents, Interaction, Message } from "discord.js";
-import { Client } from "discordx";
+
 import { dirname, importx } from "@discordx/importer";
 import { Koa } from "@discordx/koa";
+import type { Interaction, Message } from "discord.js";
+import { Intents } from "discord.js";
+import { Client } from "discordx";
 
-export const client = new Client({
-  // Configuration for @SimpleCommand
-  simpleCommand: {
-    prefix: "!",
-  },
+export const bot = new Client({
+  // To only use global commands (use @Guild for specific guild command), comment this line
+  botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
 
   // Discord intents
   intents: [
@@ -19,40 +19,42 @@ export const client = new Client({
     Intents.FLAGS.GUILD_VOICE_STATES,
   ],
 
-  // To only use global commands (use @Guild for specific guild command), comment this line
-  botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
-
   // Debug logs are disabled in silent mode
   silent: false,
+
+  // Configuration for @SimpleCommand
+  simpleCommand: {
+    prefix: "!",
+  },
 });
 
-client.once("ready", async () => {
+bot.once("ready", async () => {
   // Make sure all guilds are cached
-  await client.guilds.fetch();
+  await bot.guilds.fetch();
 
   // Synchronize applications commands with Discord
-  await client.initApplicationCommands();
+  await bot.initApplicationCommands();
 
   // Synchronize applications command permissions with Discord
-  await client.initApplicationPermissions();
+  await bot.initApplicationPermissions();
 
   // To clear all guild commands, uncomment this line,
   // This is useful when moving from guild commands to global commands
   // It must only be executed once
   //
-  //  await client.clearApplicationCommands(
-  //    ...client.guilds.cache.map((g) => g.id)
+  //  await bot.clearApplicationCommands(
+  //    ...bot.guilds.cache.map((g) => g.id)
   //  );
 
   console.log("Bot started");
 });
 
-client.on("interactionCreate", (interaction: Interaction) => {
-  client.executeInteraction(interaction);
+bot.on("interactionCreate", (interaction: Interaction) => {
+  bot.executeInteraction(interaction);
 });
 
-client.on("messageCreate", (message: Message) => {
-  client.executeCommand(message);
+bot.on("messageCreate", (message: Message) => {
+  bot.executeCommand(message);
 });
 
 async function run() {
@@ -71,7 +73,7 @@ async function run() {
   }
 
   // Log in with your bot token
-  await client.login(process.env.BOT_TOKEN);
+  await bot.login(process.env.BOT_TOKEN);
 
   // ************* rest api section: start **********
 

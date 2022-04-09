@@ -1,11 +1,11 @@
 import type { CommandInteraction } from "discord.js";
-
 import { Discord, Slash, SlashGroup, SlashOption } from "discordx";
 
 @Discord()
 @SlashGroup({ name: "testing" })
 @SlashGroup({ name: "maths", root: "testing" })
-export abstract class Group {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+class Group {
   @Slash("add")
   @SlashGroup("maths", "testing")
   add(

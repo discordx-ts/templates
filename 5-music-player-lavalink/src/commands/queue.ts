@@ -1,4 +1,6 @@
 import * as Lava from "@discordx/lava-player";
+import type { Player } from "@discordx/lava-queue";
+import { Queue } from "@discordx/lava-queue";
 import {
   Pagination,
   PaginationResolver,
@@ -16,9 +18,6 @@ import {
   MessageEmbed,
 } from "discord.js";
 import type { Client } from "discordx";
-
-import type { Player } from "@discordx/lava-queue";
-import { Queue } from "@discordx/lava-queue";
 
 export class MusicQueue extends Queue {
   lastControlMessage?: Message;
