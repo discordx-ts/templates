@@ -1,6 +1,7 @@
 {
-    "template": "node",
-    "container": {
-      "node": "16"
-    }
+  "template": "node",
+  "view": "console",
+  "container": {
+    "node": "16"
   }
+}
