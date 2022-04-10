@@ -4,11 +4,13 @@ A collection of starter bot templates used by create-discordx. Just run `npx cre
 
 # Credits/Content
 
-1. [starter](./1-starter/) from [@oceanroleplay](https://github.com/oceanroleplay)
-2. [starter-with-api](./2-starter-with-api/) from [@oceanroleplay](https://github.com/oceanroleplay)
-3. [blank](./3-blank/) from [@oceanroleplay](https://github.com/oceanroleplay)
-4. [music-player-ytdl](./4-music-player-ytdl/) from [@oceanroleplay](https://github.com/oceanroleplay)
-5. [music-player-lavalink](./5-music-player-lavalink/) from [@oceanroleplay](https://github.com/oceanroleplay)
+| Template                                             | From                                               |
+| ---------------------------------------------------- | -------------------------------------------------- |
+| [1-starter](./1-starter)                             | [@oceanroleplay](https://github.com/oceanroleplay) |
+| [2-starter-with-api](./2-starter-with-api)           | [@oceanroleplay](https://github.com/oceanroleplay) |
+| [3-blank](./3-blank)                                 | [@oceanroleplay](https://github.com/oceanroleplay) |
+| [4-music-player-ytdl](./4-music-player-ytdl)         | [@oceanroleplay](https://github.com/oceanroleplay) |
+| [5-music-player-lavalink](./5-music-player-lavalink) | [@oceanroleplay](https://github.com/oceanroleplay) |
 
 # 📜 Documentation
 
