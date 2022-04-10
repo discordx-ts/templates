@@ -9,10 +9,9 @@ import {
 } from "discordx";
 
 @Discord()
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-class Example {
+export class Example {
   @SimpleCommand("hello", { aliases: ["hi"] })
-  hello(command: SimpleCommandMessage) {
+  hello(command: SimpleCommandMessage): void {
     command.message.reply(`👋 ${command.message.member}`);
   }
 
@@ -23,25 +22,26 @@ class Example {
     @SimpleCommandOption("num2", { type: SimpleCommandOptionType.Number })
     num2: number | undefined,
     command: SimpleCommandMessage
-  ) {
+  ): void {
     if (!num1 || !num2) {
-      return command.sendUsageSyntax();
+      command.sendUsageSyntax();
+      return;
     }
     command.message.reply(`total = ${num1 + num2}`);
   }
 
   // make single handler for simple and slash command
-  likeIt(command: CommandInteraction | Message) {
+  likeIt(command: CommandInteraction | Message): void {
     command.reply("I like it, Thanks");
   }
 
   @SimpleCommand("like-it")
-  simpleLikeIt(command: SimpleCommandMessage) {
+  simpleLikeIt(command: SimpleCommandMessage): void {
     this.likeIt(command.message);
   }
 
   @Slash("like-it")
-  slashLikeIt(command: CommandInteraction) {
+  slashLikeIt(command: CommandInteraction): void {
     this.likeIt(command);
   }
 }

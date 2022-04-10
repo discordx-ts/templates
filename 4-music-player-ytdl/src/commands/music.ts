@@ -5,7 +5,6 @@ import {
   PaginationType,
 } from "@discordx/pagination";
 import type {
-  Client,
   CommandInteraction,
   ContextMenuInteraction,
   Guild,
@@ -230,9 +229,7 @@ export class MyQueue extends Queue {
   }
 
   public async view(
-    interaction: Message | CommandInteraction | ContextMenuInteraction,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    client: Client
+    interaction: Message | CommandInteraction | ContextMenuInteraction
   ): Promise<void> {
     const currentTrack = this.currentTrack;
     if (!this.isReady || !currentTrack) {

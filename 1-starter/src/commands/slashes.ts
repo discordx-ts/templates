@@ -4,8 +4,7 @@ import { MessageEmbed } from "discord.js";
 import { Discord, MetadataStorage, Slash } from "discordx";
 
 @Discord()
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-class SlashExample {
+export class SlashExample {
   // example: pagination for all slash command
   @Slash("all-commands", { description: "Pagination for all slash command" })
   async pages(interaction: CommandInteraction): Promise<void> {

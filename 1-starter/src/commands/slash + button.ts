@@ -8,14 +8,13 @@ import { MessageActionRow, MessageButton } from "discord.js";
 import { ButtonComponent, Discord, Slash, SlashOption } from "discordx";
 
 @Discord()
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-class Example {
+export class Example {
   @Slash("hello-btn")
   async hello(
     @SlashOption("user", { type: "USER" })
     user: User | GuildMember | undefined,
     interaction: CommandInteraction
-  ) {
+  ): Promise<void> {
     await interaction.deferReply();
 
     const helloBtn = new MessageButton()
@@ -33,7 +32,7 @@ class Example {
   }
 
   @ButtonComponent("hello-btn")
-  helloBtn(interaction: ButtonInteraction) {
+  helloBtn(interaction: ButtonInteraction): void {
     interaction.reply(`👋 ${interaction.member}`);
   }
 }

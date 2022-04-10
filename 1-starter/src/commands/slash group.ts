@@ -4,8 +4,7 @@ import { Discord, Slash, SlashGroup, SlashOption } from "discordx";
 @Discord()
 @SlashGroup({ name: "testing" })
 @SlashGroup({ name: "maths", root: "testing" })
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-class GroupExample {
+export class GroupExample {
   @Slash("add")
   @SlashGroup("maths", "testing")
   add(

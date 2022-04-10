@@ -2,10 +2,9 @@ import type { ArgsOf, Client } from "discordx";
 import { Discord, On } from "discordx";
 
 @Discord()
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-class Example {
+export class Example {
   @On("messageDelete")
-  onMessage([message]: ArgsOf<"messageDelete">, client: Client) {
+  onMessage([message]: ArgsOf<"messageDelete">, client: Client): void {
     console.log("Message Deleted", client.user?.username, message.content);
   }
 }

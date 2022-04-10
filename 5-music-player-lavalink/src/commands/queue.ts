@@ -17,7 +17,6 @@ import {
   MessageButton,
   MessageEmbed,
 } from "discord.js";
-import type { Client } from "discordx";
 
 export class MusicQueue extends Queue {
   lastControlMessage?: Message;
@@ -186,9 +185,7 @@ export class MusicQueue extends Queue {
   }
 
   public async view(
-    interaction: CommandInteraction | ContextMenuInteraction,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    client: Client
+    interaction: CommandInteraction | ContextMenuInteraction
   ): Promise<void> {
     if (!this.currentTrack) {
       const pMsg = await interaction.followUp({

@@ -2,15 +2,14 @@ import type { CommandInteraction } from "discord.js";
 import { Discord, Slash, SlashChoice, SlashOption } from "discordx";
 
 @Discord()
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-class Example {
+export class Example {
   @Slash("choose")
   choose(
     @SlashChoice("Human", "Astronaut", "Dev")
     @SlashOption("what", { description: "What are you?" })
     what: string,
     interaction: CommandInteraction
-  ) {
+  ): void {
     interaction.reply(what);
   }
 
@@ -21,7 +20,7 @@ class Example {
     @SlashOption("text")
     what: string,
     interaction: CommandInteraction
-  ) {
+  ): void {
     interaction.reply(what);
   }
 }

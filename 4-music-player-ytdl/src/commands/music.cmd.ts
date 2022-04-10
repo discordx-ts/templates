@@ -1,6 +1,6 @@
 import type { CommandInteraction, Guild } from "discord.js";
 import { GuildMember, MessageEmbed } from "discord.js";
-import type { ArgsOf, Client } from "discordx";
+import type { ArgsOf } from "discordx";
 import {
   ButtonComponent,
   Discord,
@@ -151,12 +151,12 @@ export class music {
   }
 
   @ButtonComponent("btn-queue")
-  queueControl(interaction: CommandInteraction, client: Client): void {
+  queueControl(interaction: CommandInteraction): void {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
       return;
     }
-    queue.view(interaction, client);
+    queue.view(interaction);
   }
 
   @ButtonComponent("btn-mix")
