@@ -1,6 +1,6 @@
 # discordx-templates
 
-A collection of starter bot templates used by create-discordx. Just run `npx create-discordx` to create a bot in seconds without having to start from scratch every time.
+A collection of starter bot templates used by [create-discordx](https://www.npmjs.com/package/create-discordx). Just run `npx create-discordx` to create a bot in seconds without having to start from scratch every time.
 
 # Credits/Content
 
