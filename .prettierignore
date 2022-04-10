@@ -7,5 +7,6 @@ yarn.lock
 CHANGELOG.md
 
 # folders
+.turbo
 build
 node_modules
