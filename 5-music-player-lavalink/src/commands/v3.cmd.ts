@@ -133,12 +133,6 @@ export class MusicPlayer {
 
     const { queue, member, channel } = cmd;
 
-    await queue.lavaPlayer.join(member.voice.channelId, {
-      deaf: true,
-    });
-
-    queue.channel = channel;
-
     let response: Lava.TrackResponse;
 
     if (type === "URL") {
@@ -158,6 +152,12 @@ export class MusicPlayer {
         tracks: [track],
       };
     }
+
+    await queue.lavaPlayer.join(member.voice.channelId, {
+      deaf: true,
+    });
+
+    queue.channel = channel;
 
     if (
       queue.lavaPlayer.status === Lava.Status.INSTANTIATED ||
