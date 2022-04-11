@@ -140,7 +140,7 @@ export class MusicQueue extends Queue {
     const timeTotal = this.currentTrack?.info.length ?? 0;
 
     const progress = Math.round((size * timeNow) / timeTotal);
-    const emptyProgress = size - (isFinite(progress) ? progress : 0);
+    const emptyProgress = size - (Number.isFinite(progress) ? progress : 0);
 
     const progressString =
       block.repeat(progress) + arrow + block.repeat(emptyProgress);
