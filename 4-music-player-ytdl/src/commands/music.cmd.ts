@@ -262,27 +262,6 @@ export class music {
     }
   }
 
-  @Slash("spotify", { description: "Play a spotify link" })
-  async spotify(
-    @SlashOption("link", { description: "spotify link" })
-    link: string,
-    interaction: CommandInteraction
-  ): Promise<void> {
-    const queue = await this.processJoin(interaction);
-    if (!queue) {
-      return;
-    }
-    const songs = await queue.spotify(link, { user: interaction.user });
-    if (!songs) {
-      interaction.followUp("The spotify song/playlist could not be found");
-    } else {
-      const embed = new MessageEmbed();
-      embed.setTitle("Enqueued");
-      embed.setDescription(`Enqueued  **${songs.length}** spotify songs`);
-      interaction.followUp({ embeds: [embed] });
-    }
-  }
-
   validateInteraction(
     interaction: CommandInteraction
   ): undefined | { guild: Guild; member: GuildMember; queue: MyQueue } {
