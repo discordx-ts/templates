@@ -17,8 +17,8 @@
     "@discordx/koa": "^1.0.9",
     "@discordx/pagination": "^2.0.1",
     "@koa/router": "^10.1.1",
-    "discord.js": "^13.6.0",
-    "discordx": "^9.5.2",
+    "discord.js": "^13.7.0",
+    "discordx": "^9.5.4",
     "koa": "^2.13.4",
     "reflect-metadata": "^0.1.13"
   },

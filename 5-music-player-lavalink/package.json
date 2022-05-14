@@ -17,8 +17,8 @@
     "@discordx/lava-player": "^1.0.7",
     "@discordx/lava-queue": "^1.0.3",
     "@discordx/pagination": "^2.0.1",
-    "discord.js": "^13.6.0",
-    "discordx": "^9.5.1",
+    "discord.js": "^13.7.0",
+    "discordx": "^9.5.4",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
