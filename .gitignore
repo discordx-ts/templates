@@ -5,6 +5,7 @@
 package-lock.json
 yarn.lock
 CHANGELOG.md
+*.bat
 
 # folders
 .turbo
