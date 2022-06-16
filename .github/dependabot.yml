@@ -8,8 +8,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "00:15"
+      interval: "weekly"
     ignore:
       - dependency-name: "@discordjs/opus"
       - dependency-name: "ffmpeg-static"
