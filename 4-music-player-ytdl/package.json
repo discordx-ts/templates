@@ -30,20 +30,19 @@
   },
   "homepage": "https://github.com/oceanroleplay/discord-music-bot#readme",
   "devDependencies": {
-    "nodemon": "^2.0.16",
-    "prettier": "^2.6.2",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
   },
   "dependencies": {
     "@discordjs/opus": "^0.7.0",
-    "@discordjs/voice": "^0.9.0",
-    "@discordx/importer": "^1.1.9",
-    "@discordx/music": "^4.0.1",
-    "@discordx/pagination": "^2.1.2",
-    "discord-api-types": "^0.30.0",
-    "discord.js": "^13.7.0",
-    "discordx": "^9.6.0",
+    "@discordjs/voice": "^0.10.0",
+    "@discordx/importer": "^1.1.10",
+    "@discordx/music": "^4.0.2",
+    "@discordx/pagination": "^2.2.2",
+    "discord.js": "^13.8.1",
+    "discordx": "^9.8.0",
     "ffmpeg-static": "^5.0.0",
     "libsodium-wrappers": "^0.7.10",
     "reflect-metadata": "^0.1.13"

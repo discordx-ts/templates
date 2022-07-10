@@ -34,9 +34,6 @@ bot.once("ready", async () => {
   // Synchronize applications commands with Discord
   await bot.initApplicationCommands();
 
-  // Synchronize applications command permissions with Discord
-  await bot.initApplicationPermissions();
-
   // To clear all guild commands, uncomment this line,
   // This is useful when moving from guild commands to global commands
   // It must only be executed once
