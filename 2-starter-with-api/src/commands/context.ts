@@ -1,15 +1,19 @@
-import type { ContextMenuInteraction } from "discord.js";
+import type {
+  MessageContextMenuCommandInteraction,
+  UserContextMenuCommandInteraction,
+} from "discord.js";
+import { ApplicationCommandType } from "discord.js";
 import { ContextMenu, Discord } from "discordx";
 
 @Discord()
 export class Example {
-  @ContextMenu("MESSAGE", "message context")
-  messageHandler(interaction: ContextMenuInteraction): void {
+  @ContextMenu(ApplicationCommandType.Message, "message context")
+  messageHandler(interaction: MessageContextMenuCommandInteraction): void {
     interaction.reply("I am user context handler");
   }
 
-  @ContextMenu("USER", "user context")
-  userHandler(interaction: ContextMenuInteraction): void {
+  @ContextMenu(ApplicationCommandType.User, "user context")
+  userHandler(interaction: UserContextMenuCommandInteraction): void {
     interaction.reply("I am user context handler");
   }
 }

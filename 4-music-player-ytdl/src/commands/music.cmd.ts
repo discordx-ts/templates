@@ -1,5 +1,5 @@
 import type { CommandInteraction, Guild } from "discord.js";
-import { GuildMember, MessageEmbed } from "discord.js";
+import { EmbedBuilder, GuildMember } from "discord.js";
 import type { ArgsOf } from "discordx";
 import {
   ButtonComponent,
@@ -232,7 +232,7 @@ export class music {
     if (!song) {
       interaction.followUp("The song could not be found");
     } else {
-      const embed = new MessageEmbed();
+      const embed = new EmbedBuilder();
       embed.setTitle("Enqueued");
       embed.setDescription(`Enqueued song **${song.title}****`);
       interaction.followUp({ embeds: [embed] });
@@ -255,7 +255,7 @@ export class music {
     if (!songs) {
       interaction.followUp("The playlist could not be found");
     } else {
-      const embed = new MessageEmbed();
+      const embed = new EmbedBuilder();
       embed.setTitle("Enqueued");
       embed.setDescription(`Enqueued  **${songs.length}** songs from playlist`);
       interaction.followUp({ embeds: [embed] });

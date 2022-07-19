@@ -6,7 +6,11 @@ import type {
   Guild,
   TextBasedChannel,
 } from "discord.js";
-import { GuildMember, MessageEmbed } from "discord.js";
+import {
+  ApplicationCommandOptionType,
+  EmbedBuilder,
+  GuildMember,
+} from "discord.js";
 import type { ArgsOf, Client } from "discordx";
 import {
   ButtonComponent,
@@ -119,9 +123,9 @@ export class MusicPlayer {
   @Slash()
   async play(
     @SlashChoice("URL", "SEARCH")
-    @SlashOption("type", { type: "STRING" })
+    @SlashOption("type", { type: ApplicationCommandOptionType.String })
     type: "URL" | "SEARCH",
-    @SlashOption("input", { type: "STRING" })
+    @SlashOption("input", { type: ApplicationCommandOptionType.String })
     input: string,
     interaction: CommandInteraction,
     client: Client
@@ -167,7 +171,7 @@ export class MusicPlayer {
       queue.playNext();
     }
 
-    const embed = new MessageEmbed();
+    const embed = new EmbedBuilder();
     embed.setTitle("Enqueued");
     if (response.playlistInfo.name) {
       embed.setDescription(
