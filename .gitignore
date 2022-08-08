@@ -4,6 +4,7 @@
 .env.local
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 CHANGELOG.md
 *.bat
 
