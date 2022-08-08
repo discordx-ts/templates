@@ -36,7 +36,7 @@
   </p>
 </div>
 
-# Discordx-Templates
+# 📖 Introduction
 
 This repository contains all the starter bot templates used by [create-discordx](https://www.npmjs.com/package/create-discordx), To get started using one of these templates simply run the following command:
 
