@@ -44,7 +44,7 @@ This repository contains all the starter bot templates used by [create-discordx]
 npx create-discordx
 ```
 
-## Templates
+# Templates
 
 | Template                                             | From                                               |
 | ---------------------------------------------------- | -------------------------------------------------- |
@@ -54,17 +54,17 @@ npx create-discordx
 | [4-music-player-ytdl](./4-music-player-ytdl)         | [@oceanroleplay](https://github.com/oceanroleplay) |
 | [5-music-player-lavalink](./5-music-player-lavalink) | [@oceanroleplay](https://github.com/oceanroleplay) |
 
-## 📜 Documentation
+# 📜 Documentation
 
 - [discord-ts.js.org](https://discord-ts.js.org)
 - [Tutorials (dev.to)](https://dev.to/oceanroleplay/series/14317)
 
-## ☎️ Need help?
+# ☎️ Need help?
 
 - [Check frequently asked questions](https://discord-ts.js.org/docs/faq)
 - [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
 - Join and ask in our [Discord Server](https://discord-ts.js.org/discord)
 
-## 💖 Thank you 💖
+# 💖 Thank you 💖
 
 If you feel like supporting us in making [Discordx](https://www.npmjs.com/package/discordx), Why not give us a star on [GitHub](https://github.com/oceanroleplay/discord.ts)?

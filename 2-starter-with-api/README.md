@@ -36,7 +36,7 @@
   </p>
 </div>
 
-## 🏗 Development
+# 🏗 Development
 
 ```
 npm install
@@ -49,7 +49,7 @@ If you want to use [Nodemon](https://nodemon.io/) to auto-reload while in develo
 npm run watch
 ```
 
-## 💻 Production
+# 💻 Production
 
 ```
 npm install --production
@@ -57,7 +57,7 @@ npm run build
 npm run start
 ```
 
-### 🐋 Docker (Recommended)
+## 🐋 Docker (Recommended)
 
 To start your application:
 
@@ -79,17 +79,17 @@ docker-compose logs
 
 For the full command list please view the [Docker Documentation](https://docs.docker.com/engine/reference/commandline/cli/).
 
-## 📜 Documentation
+# 📜 Documentation
 
 - [discord-ts.js.org](https://discord-ts.js.org)
 - [Tutorials (dev.to)](https://dev.to/oceanroleplay/series/14317)
 
-## ☎️ Need help?
+# ☎️ Need help?
 
 - [Check frequently asked questions](https://discord-ts.js.org/docs/faq)
 - [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
 - Join and ask in our [Discord Server](https://discord-ts.js.org/discord)
 
-## 💖 Thank you 💖
+# 💖 Thank you 💖
 
 If you feel like supporting us in making [Discordx](https://www.npmjs.com/package/discordx), Why not give us a star on [GitHub](https://github.com/oceanroleplay/discord.ts)?
