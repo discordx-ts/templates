@@ -38,7 +38,7 @@
 
 # 📖 Introduction
 
-A music template using TYDL, equipped with a few music-related commands.
+A music template using YTDL (YouTube-Download), equipped with a few music-related commands.
 
 # 🏗 Development
 
