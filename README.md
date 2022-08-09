@@ -65,6 +65,6 @@ npx create-discordx
 - [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
 - Join and ask in our [Discord Server](https://discord-ts.js.org/discord)
 
-# 💖 Thank you 💖
+# 💖 Thank you
 
 If you feel like supporting us in making [Discordx](https://www.npmjs.com/package/discordx), Why not give us a star on [GitHub](https://github.com/oceanroleplay/discord.ts)?
