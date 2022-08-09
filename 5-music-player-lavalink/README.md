@@ -57,7 +57,7 @@ npm run build
 npm run start
 ```
 
-## 🐋 Docker
+# 🐋 Docker
 
 To start your application:
 
