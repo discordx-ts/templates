@@ -36,6 +36,10 @@
   </p>
 </div>
 
+# 📖 Introduction
+
+A music template using Lavalink, equipped with a few music-related commands.
+
 # 🏗 Development
 
 ```

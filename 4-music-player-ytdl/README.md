@@ -36,6 +36,10 @@
   </p>
 </div>
 
+# 📖 Introduction
+
+A music template using TYDL, equipped with a few music-related commands.
+
 # 🏗 Development
 
 ```

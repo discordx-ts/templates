@@ -36,6 +36,10 @@
   </p>
 </div>
 
+# 📖 Introduction
+
+A blank template with one command and one event, This is a useful template if you want to quickly spin up a project.
+
 # 🏗 Development
 
 ```

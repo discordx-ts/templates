@@ -36,6 +36,10 @@
   </p>
 </div>
 
+# 📖 Introduction
+
+A starter template equipped with several interaction commands and one event.
+
 # 🏗 Development
 
 ```
