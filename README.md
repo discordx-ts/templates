@@ -44,7 +44,7 @@ This repository contains all the starter bot templates used by [create-discordx]
 npx create-discordx
 ```
 
-# Templates
+# 🗂 Templates
 
 | Template                                             | From                                               |
 | ---------------------------------------------------- | -------------------------------------------------- |
