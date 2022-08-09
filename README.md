@@ -63,8 +63,8 @@ npx create-discordx
 
 - [Check frequently asked questions](https://discord-ts.js.org/docs/faq)
 - [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
-- Join and ask in our [Discord Server](https://discord-ts.js.org/discord)
+- Ask in [Discord Server](https://discord-ts.js.org/discord)
 
 # 💖 Thank you
 
-If you feel like supporting us in making [Discordx](https://www.npmjs.com/package/discordx), Why not give us a star on [GitHub](https://github.com/oceanroleplay/discord.ts)?
+Show your support for [Discordx](https://www.npmjs.com/package/discordx) by giving us a star on [GitHub](https://github.com/oceanroleplay/discord.ts).
