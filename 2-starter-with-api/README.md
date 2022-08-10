@@ -92,7 +92,7 @@ For the full command list please view the [Docker Documentation](https://docs.do
 
 - [Check frequently asked questions](https://discord-ts.js.org/docs/faq)
 - [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
-- Join and Ask in our [Discord Server](https://discord-ts.js.org/discord)
+- Ask in the community [Discord Server](https://discord-ts.js.org/discord)
 
 # 💖 Thank you
 
