@@ -36,6 +36,10 @@
   </p>
 </div>
 
+# 📖 Introduction
+
+A starter template equipped with several interaction commands and one event.
+
 # 🏗 Development
 
 ```
@@ -88,8 +92,8 @@ For the full command list please view the [Docker Documentation](https://docs.do
 
 - [Check frequently asked questions](https://discord-ts.js.org/docs/faq)
 - [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
-- Ask in [Discord Server](https://discord-ts.js.org/discord)
+- Ask in the community [Discord server](https://discord-ts.js.org/discord)
 
 # 💖 Thank you
 
-Show your support for [Discordx](https://www.npmjs.com/package/discordx) by giving us a star on [GitHub](https://github.com/oceanroleplay/discord.ts).
+You can support [Discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/oceanroleplay/discord.ts) star.
