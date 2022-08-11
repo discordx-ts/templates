@@ -28,7 +28,7 @@ export class Example {
 
     await interaction.followUp(
       `you have selected role: ${
-        roles.find((r) => r.value === roleValue)?.label
+        roles.find((r) => r.value === roleValue)?.label ?? "unknown"
       }`
     );
     return;

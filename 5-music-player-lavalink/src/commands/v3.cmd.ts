@@ -1,4 +1,5 @@
-import * as Lava from "@discordx/lava-player";
+import type { TrackResponse } from "@discordx/lava-player";
+import { LoadType, Status } from "@discordx/lava-player";
 import { Player } from "@discordx/lava-queue";
 import type {
   ButtonInteraction,
@@ -137,7 +138,7 @@ export class MusicPlayer {
 
     const { queue, member, channel } = cmd;
 
-    let response: Lava.TrackResponse;
+    let response: TrackResponse;
 
     if (type === "URL") {
       response = await queue.enqueue(input);
@@ -151,7 +152,7 @@ export class MusicPlayer {
 
       queue.tracks.push(track);
       response = {
-        loadType: Lava.LoadType.TRACK_LOADED,
+        loadType: LoadType.TRACK_LOADED,
         playlistInfo: {},
         tracks: [track],
       };
@@ -164,9 +165,9 @@ export class MusicPlayer {
     queue.channel = channel;
 
     if (
-      queue.lavaPlayer.status === Lava.Status.INSTANTIATED ||
-      queue.lavaPlayer.status === Lava.Status.UNKNOWN ||
-      queue.lavaPlayer.status === Lava.Status.ENDED
+      queue.lavaPlayer.status === Status.INSTANTIATED ||
+      queue.lavaPlayer.status === Status.UNKNOWN ||
+      queue.lavaPlayer.status === Status.ENDED
     ) {
       queue.playNext();
     }
