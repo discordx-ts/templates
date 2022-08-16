@@ -15,9 +15,9 @@ import { ButtonComponent, Discord, Slash, SlashOption } from "discordx";
 
 @Discord()
 export class Example {
-  @Slash("hello-btn")
+  @Slash({ name: "hello-btn" })
   async hello(
-    @SlashOption("user", { type: ApplicationCommandOptionType.User })
+    @SlashOption({ name: "user", type: ApplicationCommandOptionType.User })
     user: User | GuildMember | undefined,
     interaction: CommandInteraction
   ): Promise<void> {
@@ -40,7 +40,7 @@ export class Example {
     });
   }
 
-  @ButtonComponent("hello-btn")
+  @ButtonComponent({ id: "hello-btn" })
   helloBtn(interaction: ButtonInteraction): void {
     interaction.reply(`👋 ${interaction.member}`);
   }

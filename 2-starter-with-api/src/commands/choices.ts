@@ -3,21 +3,21 @@ import { Discord, Slash, SlashChoice, SlashOption } from "discordx";
 
 @Discord()
 export class Example {
-  @Slash("choose")
+  @Slash()
   choose(
     @SlashChoice("Human", "Astronaut", "Dev")
-    @SlashOption("what", { description: "What are you?" })
+    @SlashOption({ description: "What are you?", name: "what" })
     what: string,
     interaction: CommandInteraction
   ): void {
     interaction.reply(what);
   }
 
-  @Slash("choice")
+  @Slash()
   choice(
     @SlashChoice({ name: "are you okay?", value: "okay" })
     @SlashChoice({ name: "are you good?", value: "good" })
-    @SlashOption("text")
+    @SlashOption({ name: "text" })
     what: string,
     interaction: CommandInteraction
   ): void {

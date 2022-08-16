@@ -14,7 +14,7 @@ const roles = [
 
 @Discord()
 export class Example {
-  @SelectMenuComponent("role-menu")
+  @SelectMenuComponent({ id: "role-menu" })
   async handle(interaction: SelectMenuInteraction): Promise<unknown> {
     await interaction.deferReply();
 
@@ -34,7 +34,7 @@ export class Example {
     return;
   }
 
-  @Slash("my_roles", { description: "roles menu" })
+  @Slash({ description: "roles menu", name: "my_roles" })
   async myRoles(interaction: CommandInteraction): Promise<unknown> {
     await interaction.deferReply();
 

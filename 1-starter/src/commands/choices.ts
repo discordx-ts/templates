@@ -6,7 +6,7 @@ export class Example {
   @Slash()
   choose(
     @SlashChoice("Human", "Astronaut", "Dev")
-    @SlashOption("what", { description: "What are you?" })
+    @SlashOption({ description: "What are you?", name: "what" })
     what: string,
     interaction: CommandInteraction
   ): void {
@@ -17,7 +17,7 @@ export class Example {
   choice(
     @SlashChoice({ name: "are you okay?", value: "okay" })
     @SlashChoice({ name: "are you good?", value: "good" })
-    @SlashOption("text")
+    @SlashOption({ name: "text" })
     what: string,
     interaction: CommandInteraction
   ): void {

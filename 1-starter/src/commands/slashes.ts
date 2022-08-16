@@ -6,7 +6,10 @@ import { Discord, MetadataStorage, Slash } from "discordx";
 @Discord()
 export class SlashExample {
   // example: pagination for all slash command
-  @Slash("all-commands", { description: "Pagination for all slash command" })
+  @Slash({
+    description: "Pagination for all slash command",
+    name: "all-commands",
+  })
   async pages(interaction: CommandInteraction): Promise<void> {
     const commands = MetadataStorage.instance.applicationCommands.map((cmd) => {
       return { description: cmd.description, name: cmd.name };

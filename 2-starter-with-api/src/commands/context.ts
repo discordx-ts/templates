@@ -7,12 +7,18 @@ import { ContextMenu, Discord } from "discordx";
 
 @Discord()
 export class Example {
-  @ContextMenu(ApplicationCommandType.Message, "message context")
+  @ContextMenu({
+    name: "message context",
+    type: ApplicationCommandType.Message,
+  })
   messageHandler(interaction: MessageContextMenuCommandInteraction): void {
     interaction.reply("I am user context handler");
   }
 
-  @ContextMenu(ApplicationCommandType.User, "user context")
+  @ContextMenu({
+    name: "user context",
+    type: ApplicationCommandType.User,
+  })
   userHandler(interaction: UserContextMenuCommandInteraction): void {
     interaction.reply("I am user context handler");
   }

@@ -10,16 +10,16 @@ import {
 
 @Discord()
 export class Example {
-  @SimpleCommand("hello", { aliases: ["hi"] })
+  @SimpleCommand({ aliases: ["hi"] })
   hello(command: SimpleCommandMessage): void {
     command.message.reply(`👋 ${command.message.member}`);
   }
 
-  @SimpleCommand("sum", { argSplitter: "+" })
+  @SimpleCommand({ argSplitter: "+" })
   sum(
-    @SimpleCommandOption("num1", { type: SimpleCommandOptionType.Number })
+    @SimpleCommandOption({ name: "num1", type: SimpleCommandOptionType.Number })
     num1: number | undefined,
-    @SimpleCommandOption("num2", { type: SimpleCommandOptionType.Number })
+    @SimpleCommandOption({ name: "num2", type: SimpleCommandOptionType.Number })
     num2: number | undefined,
     command: SimpleCommandMessage
   ): void {
@@ -35,12 +35,12 @@ export class Example {
     command.reply("I like it, Thanks");
   }
 
-  @SimpleCommand("like-it")
+  @SimpleCommand({ name: "like-it" })
   simpleLikeIt(command: SimpleCommandMessage): void {
     this.likeIt(command.message);
   }
 
-  @Slash("like-it")
+  @Slash({ name: "like-it" })
   slashLikeIt(command: CommandInteraction): void {
     this.likeIt(command);
   }

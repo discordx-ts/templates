@@ -25,8 +25,8 @@ export class music {
     this.player = new MyPlayer();
   }
 
-  @On("voiceStateUpdate")
-  voiceUpdate([oldState, newState]: ArgsOf<"voiceStateUpdate">): void {
+  @On()
+  voiceStateUpdate([oldState, newState]: ArgsOf<"voiceStateUpdate">): void {
     const queue = this.player.getQueue(oldState.guild);
 
     if (
@@ -106,7 +106,7 @@ export class music {
     return queue;
   }
 
-  @ButtonComponent("btn-next")
+  @ButtonComponent({ id: "btn-next" })
   async nextControl(interaction: CommandInteraction): Promise<void> {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -117,7 +117,7 @@ export class music {
     interaction.deleteReply();
   }
 
-  @ButtonComponent("btn-pause")
+  @ButtonComponent({ id: "btn-pause" })
   async pauseControl(interaction: CommandInteraction): Promise<void> {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -128,7 +128,7 @@ export class music {
     interaction.deleteReply();
   }
 
-  @ButtonComponent("btn-leave")
+  @ButtonComponent({ id: "btn-leave" })
   async leaveControl(interaction: CommandInteraction): Promise<void> {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -139,7 +139,7 @@ export class music {
     interaction.deleteReply();
   }
 
-  @ButtonComponent("btn-repeat")
+  @ButtonComponent({ id: "btn-repeat" })
   async repeatControl(interaction: CommandInteraction): Promise<void> {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -150,7 +150,7 @@ export class music {
     interaction.deleteReply();
   }
 
-  @ButtonComponent("btn-queue")
+  @ButtonComponent({ id: "btn-queue" })
   queueControl(interaction: CommandInteraction): void {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -159,7 +159,7 @@ export class music {
     queue.view(interaction);
   }
 
-  @ButtonComponent("btn-mix")
+  @ButtonComponent({ id: "btn-mix" })
   async mixControl(interaction: CommandInteraction): Promise<void> {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -170,7 +170,7 @@ export class music {
     interaction.deleteReply();
   }
 
-  @ButtonComponent("btn-controls")
+  @ButtonComponent({ id: "btn-controls" })
   async controlsControl(interaction: CommandInteraction): Promise<void> {
     const queue = this.validateControlInteraction(interaction);
     if (!queue) {
@@ -218,9 +218,9 @@ export class music {
     return queue;
   }
 
-  @Slash("play", { description: "Play a song" })
+  @Slash({ description: "Play a song" })
   async play(
-    @SlashOption("song", { description: "song name" })
+    @SlashOption({ description: "song name", name: "song" })
     songName: string,
     interaction: CommandInteraction
   ): Promise<void> {
@@ -239,9 +239,9 @@ export class music {
     }
   }
 
-  @Slash("playlist", { description: "Play a playlist" })
+  @Slash({ description: "Play a playlist" })
   async playlist(
-    @SlashOption("playlist", { description: "playlist name" })
+    @SlashOption({ description: "playlist name", name: "playlist" })
     playlistName: string,
     interaction: CommandInteraction
   ): Promise<void> {
@@ -304,7 +304,7 @@ export class music {
     return { guild: interaction.guild, member: interaction.member, queue };
   }
 
-  @Slash("skip", { description: "skip track" })
+  @Slash({ description: "skip track" })
   skip(interaction: CommandInteraction): void {
     const validate = this.validateInteraction(interaction);
     if (!validate) {
@@ -317,7 +317,7 @@ export class music {
     interaction.reply("> skipped current song");
   }
 
-  @Slash("mix", { description: "mix tracks" })
+  @Slash({ description: "mix tracks" })
   mix(interaction: CommandInteraction): void {
     const validate = this.validateInteraction(interaction);
     if (!validate) {
@@ -330,7 +330,7 @@ export class music {
     interaction.reply("> mixed current queue");
   }
 
-  @Slash("pause", { description: "pause music" })
+  @Slash({ description: "pause music" })
   pause(interaction: CommandInteraction): void {
     const validate = this.validateInteraction(interaction);
     if (!validate) {
@@ -348,7 +348,7 @@ export class music {
     interaction.reply("> paused music");
   }
 
-  @Slash("resume", { description: "resume music" })
+  @Slash({ description: "resume music" })
   resume(interaction: CommandInteraction): void {
     const validate = this.validateInteraction(interaction);
     if (!validate) {
@@ -366,10 +366,11 @@ export class music {
     interaction.reply("> resumed music");
   }
 
-  @Slash("seek", { description: "seek music" })
+  @Slash({ description: "seek music" })
   seek(
-    @SlashOption("time", {
+    @SlashOption({
       description: "seek time in seconds",
+      name: "time",
     })
     time: number,
     interaction: CommandInteraction
@@ -394,7 +395,7 @@ export class music {
     interaction.reply("> current music seeked");
   }
 
-  @Slash("leave", { description: "stop music" })
+  @Slash({ description: "stop music" })
   leave(interaction: CommandInteraction): void {
     const validate = this.validateInteraction(interaction);
     if (!validate) {
