@@ -18,14 +18,14 @@
     "@discordx/pagination": "^3.0.0",
     "@koa/router": "^12.0.0",
     "discord.js": "^14.2.0",
-    "discordx": "^11.1.0",
+    "discordx": "^11.1.8",
     "koa": "^2.13.4",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@types/koa": "^2.13.5",
     "@types/koa__router": "^8.0.11",
-    "@types/node": "^18.7.5",
+    "@types/node": "^18.7.8",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",

@@ -15,11 +15,11 @@
   "dependencies": {
     "@discordx/importer": "^1.1.10",
     "discord.js": "^14.2.0",
-    "discordx": "^11.1.0",
+    "discordx": "^11.1.8",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@types/node": "^18.7.5",
+    "@types/node": "^18.7.8",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
