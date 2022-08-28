@@ -96,4 +96,4 @@ For the full command list along with how to properly utilize Docker view the [Do
 
 # 💖 Thank you
 
-You can support [Discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/oceanroleplay/discord.ts) star.
+You can support [discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/oceanroleplay/discord.ts) star.
