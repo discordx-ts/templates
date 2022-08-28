@@ -26,11 +26,7 @@ export class MyQueue extends Queue {
 
   get playbackMilliseconds(): number {
     const track = this.currentTrack;
-    if (
-      !track ||
-      !track.metadata.isYoutubeTrack() ||
-      !track.metadata.info.duration
-    ) {
+    if (!track?.metadata.isYoutubeTrack() || !track.metadata.info.duration) {
       return 0;
     }
 
