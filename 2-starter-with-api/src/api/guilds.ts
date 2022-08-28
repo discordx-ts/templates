@@ -10,7 +10,7 @@ export class API {
     context.body = `
       <div style="text-align: center">
         <h1>
-          <a href="https://discord-ts.js.org">discord.ts</a> rest api server example
+          <a href="https://discordx.js.org">discord.ts</a> rest api server example
         </h1>
         <p>
           powered by <a href="https://koajs.com/">koa</a> and
