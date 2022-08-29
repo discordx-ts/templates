@@ -143,7 +143,7 @@ export class MusicPlayer {
     if (type === "URL") {
       response = await queue.enqueue(input);
     } else {
-      const searchResponse = await queue.search(input);
+      const searchResponse = await queue.search(`ytsearch:${input}`);
       const track = searchResponse.tracks[0];
       if (!track) {
         interaction.followUp("> no search result");
