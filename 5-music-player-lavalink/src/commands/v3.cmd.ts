@@ -239,7 +239,7 @@ export class MusicPlayer {
       queue.stop();
       await queue.lavaPlayer.leave();
     }
-    
+
     // update controls
     queue.updateControlMessage();
 
