@@ -1,2 +1,0 @@
-FROM fredboat/lavalink
-ADD application.yml application.yml
