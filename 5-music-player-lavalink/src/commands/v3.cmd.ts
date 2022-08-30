@@ -234,7 +234,11 @@ export class MusicPlayer {
 
     const { queue } = cmd;
 
-    queue.playNext();
+    const next = queue.playNext();
+    if (!next) {
+      queue.stop();
+      await queue.lavaPlayer.leave();
+    }
     queue.updateControlMessage();
 
     // delete interaction
