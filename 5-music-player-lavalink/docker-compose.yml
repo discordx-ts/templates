@@ -6,9 +6,9 @@ networks:
 
 services:
   lavalink:
-    build:
-      context: .
-      dockerfile: Dockerfile-Lavalink
+    image: fredboat/lavalink
+    volumes:
+      - ./application.yml:/opt/Lavalink/application.yml
     expose:
       - 2333
       - 2333/udp
