@@ -241,12 +241,9 @@ export class MusicQueue extends Queue {
       const queue = this.tracks
         .slice(currentPage * 10, currentPage * 10 + 10)
         .map((track, index1) => {
-          let endTime: string;
-          if (track.info.isStream) {
-            endTime = "Livestream";
-          } else {
-            endTime = this.fromMS(track.info.length);
-          }
+          const endTime = track.info.isStream
+            ? "Livestream"
+            : this.fromMS(track.info.length);
 
           return (
             `${currentPage * 10 + index1 + 1}. [${track.info.title}](<${
