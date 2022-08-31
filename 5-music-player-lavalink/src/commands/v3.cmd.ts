@@ -209,9 +209,7 @@ export class MusicPlayer {
     }
 
     if (!queue.currentTrack.info.isSeekable) {
-      await interaction.followUp(
-        "> this track can't be seeked"
-      );
+      await interaction.followUp("> this track can't be seeked");
       return;
     }
 
