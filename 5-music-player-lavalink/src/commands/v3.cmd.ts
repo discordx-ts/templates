@@ -208,6 +208,13 @@ export class MusicPlayer {
       return;
     }
 
+    if (!queue.currentTrack.info.isSeekable) {
+      await interaction.followUp(
+        "> this track can't be seeked"
+      );
+      return;
+    }
+
     if (seconds * 1000 > queue.currentTrack.info.length) {
       queue.playNext();
       interaction.followUp("> skipped the track instead");
