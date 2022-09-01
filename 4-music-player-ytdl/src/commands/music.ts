@@ -33,6 +33,10 @@ export class MyQueue extends Queue {
     return this.toMS(track.metadata.info.duration);
   }
 
+  get isControlLastMessage(): boolean {
+    return this.lastControlMessage?.id === this.channel?.lastMessageId;
+  }
+
   constructor(player: Player, guild: Guild, public channel?: TextBasedChannel) {
     super(player, guild);
     setInterval(() => this.updateControlMessage(), 1e4);
@@ -221,7 +225,11 @@ export class MyQueue extends Queue {
     }
 
     try {
-      if (!this.lastControlMessage || options?.force) {
+      if (
+        !this.lastControlMessage ||
+        !this.isControlLastMessage ||
+        options?.force
+      ) {
         if (this.lastControlMessage) {
           await this.lastControlMessage.delete();
           this.lastControlMessage = undefined;
