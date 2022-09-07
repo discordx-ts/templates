@@ -38,22 +38,50 @@
 
 # 📖 Introduction
 
-This repository contains all the starter bot templates used by [create-discordx](https://www.npmjs.com/package/create-discordx), To get started using one of these templates simply run the following command:
+A starter template equipped with one API route.
+
+# 🏗 Development
 
 ```
-npx create-discordx
+npm install
+npm run dev
 ```
 
-# 🗂 Templates
+If you want to use [Nodemon](https://nodemon.io/) to auto-reload while in development:
 
-| Template                                             | From                                               |
-| ---------------------------------------------------- | -------------------------------------------------- |
-| [1-starter](./1-starter)                             | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [2-starter-with-api](./2-starter-with-api)           | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [3-blank](./3-blank)                                 | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [4-music-player-ytdl](./4-music-player-ytdl)         | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [5-music-player-lavalink](./5-music-player-lavalink) | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [6-koa-server](./6-koa-server)                       | [@oceanroleplay](https://github.com/oceanroleplay) |
+```
+npm run watch
+```
+
+# 💻 Production
+
+```
+npm install --production
+npm run build
+npm run start
+```
+
+# 🐋 Docker
+
+To start your application:
+
+```
+docker-compose up -d
+```
+
+To shut down your application:
+
+```
+docker-compose down
+```
+
+To view your application's logs:
+
+```
+docker-compose logs
+```
+
+For the full command list please view the [Docker Documentation](https://docs.docker.com/engine/reference/commandline/cli/).
 
 # 📜 Documentation
 
