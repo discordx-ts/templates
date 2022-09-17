@@ -7,8 +7,8 @@ import { IntentsBitField } from "discord.js";
 import { Client } from "discordx";
 
 export const bot = new Client({
-  // To only use global commands (use @Guild for specific guild command), comment this line
-  botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
+  // To use only guild command
+  // botGuilds: [(client) => client.guilds.cache.map((guild) => guild.id)],
 
   // Discord intents
   intents: [
@@ -30,7 +30,7 @@ export const bot = new Client({
 
 bot.once("ready", async () => {
   // Make sure all guilds are cached
-  await bot.guilds.fetch();
+  // await bot.guilds.fetch();
 
   // Synchronize applications commands with Discord
   await bot.initApplicationCommands();
