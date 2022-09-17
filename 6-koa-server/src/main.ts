@@ -7,7 +7,7 @@ async function run() {
   // await importx(__dirname + "/api/**/*.{ts,js}");
 
   // The following syntax should be used in the ECMAScript environment
-  await importx(dirname(import.meta.url) + "/api/**/*.{ts,js}");
+  await importx(`${dirname(import.meta.url)}/api/**/*.{ts,js}`);
 
   // ************* rest api section: start **********
 
