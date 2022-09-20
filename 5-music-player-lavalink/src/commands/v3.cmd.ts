@@ -114,7 +114,7 @@ export class MusicPlayer {
   // events
 
   @Once()
-  async ready([]: ArgsOf<"ready">, client: Client): Promise<void> {
+  async ready(_: ArgsOf<"ready">, client: Client): Promise<void> {
     await wait(5e3);
     this.player[client.botId] = new Player(getNode(client));
   }
