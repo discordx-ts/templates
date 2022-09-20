@@ -1,23 +1,34 @@
 import type { CommandInteraction } from "discord.js";
+import { ApplicationCommandOptionType } from "discord.js";
 import { Discord, Slash, SlashChoice, SlashOption } from "discordx";
 
 @Discord()
 export class Example {
-  @Slash()
+  @Slash({ description: "choose" })
   choose(
     @SlashChoice("Human", "Astronaut", "Dev")
-    @SlashOption({ description: "What are you?", name: "what" })
+    @SlashOption({
+      description: "What are you?",
+      name: "what",
+      required: true,
+      type: ApplicationCommandOptionType.String,
+    })
     what: string,
     interaction: CommandInteraction
   ): void {
     interaction.reply(what);
   }
 
-  @Slash()
-  choice(
+  @Slash({ description: "choose1" })
+  choose1(
     @SlashChoice({ name: "are you okay?", value: "okay" })
     @SlashChoice({ name: "are you good?", value: "good" })
-    @SlashOption({ name: "text" })
+    @SlashOption({
+      description: "what1",
+      name: "what1",
+      required: true,
+      type: ApplicationCommandOptionType.String,
+    })
     what: string,
     interaction: CommandInteraction
   ): void {

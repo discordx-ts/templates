@@ -1,5 +1,9 @@
 import type { CommandInteraction, Guild } from "discord.js";
-import { EmbedBuilder, GuildMember } from "discord.js";
+import {
+  ApplicationCommandOptionType,
+  EmbedBuilder,
+  GuildMember,
+} from "discord.js";
 import type { ArgsOf } from "discordx";
 import {
   ButtonComponent,
@@ -15,7 +19,7 @@ import { MyPlayer } from "./music.js";
 
 @Discord()
 // Create music group
-@SlashGroup({ name: "music" })
+@SlashGroup({ description: "music", name: "music" })
 // Assign all slashes to music group
 @SlashGroup("music")
 export class music {
@@ -220,7 +224,12 @@ export class music {
 
   @Slash({ description: "Play a song" })
   async play(
-    @SlashOption({ description: "song name", name: "song" })
+    @SlashOption({
+      description: "song url or title",
+      name: "song",
+      required: true,
+      type: ApplicationCommandOptionType.String,
+    })
     songName: string,
     interaction: CommandInteraction
   ): Promise<void> {
@@ -241,7 +250,12 @@ export class music {
 
   @Slash({ description: "Play a playlist" })
   async playlist(
-    @SlashOption({ description: "playlist name", name: "playlist" })
+    @SlashOption({
+      description: "playlist name",
+      name: "playlist",
+      required: true,
+      type: ApplicationCommandOptionType.String,
+    })
     playlistName: string,
     interaction: CommandInteraction
   ): Promise<void> {
@@ -371,6 +385,8 @@ export class music {
     @SlashOption({
       description: "seek time in seconds",
       name: "time",
+      required: true,
+      type: ApplicationCommandOptionType.Number,
     })
     time: number,
     interaction: CommandInteraction

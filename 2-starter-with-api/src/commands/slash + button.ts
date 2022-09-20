@@ -15,9 +15,14 @@ import { ButtonComponent, Discord, Slash, SlashOption } from "discordx";
 
 @Discord()
 export class Example {
-  @Slash({ name: "hello-btn" })
+  @Slash({ description: "hello", name: "hello-btn" })
   async hello(
-    @SlashOption({ name: "user", type: ApplicationCommandOptionType.User })
+    @SlashOption({
+      description: "user",
+      name: "user",
+      required: true,
+      type: ApplicationCommandOptionType.User,
+    })
     user: User | GuildMember | undefined,
     interaction: CommandInteraction
   ): Promise<void> {

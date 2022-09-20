@@ -40,7 +40,7 @@ export class Example {
     this.likeIt(command.message);
   }
 
-  @Slash({ name: "like-it" })
+  @Slash({ description: "like-ite", name: "like-it" })
   slashLikeIt(command: CommandInteraction): void {
     this.likeIt(command);
   }

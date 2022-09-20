@@ -121,12 +121,22 @@ export class MusicPlayer {
 
   // slashes
 
-  @Slash()
+  @Slash({ description: "play" })
   async play(
     @SlashChoice("URL", "SEARCH")
-    @SlashOption({ name: "type", type: ApplicationCommandOptionType.String })
+    @SlashOption({
+      description: "type",
+      name: "type",
+      required: true,
+      type: ApplicationCommandOptionType.String,
+    })
     type: "URL" | "SEARCH",
-    @SlashOption({ name: "input", type: ApplicationCommandOptionType.String })
+    @SlashOption({
+      description: "input",
+      name: "input",
+      required: true,
+      type: ApplicationCommandOptionType.String,
+    })
     input: string,
     interaction: CommandInteraction,
     client: Client
@@ -190,9 +200,15 @@ export class MusicPlayer {
     return;
   }
 
-  @Slash()
+  @Slash({ description: "seek" })
   async seek(
-    @SlashOption({ name: "seconds" }) seconds: number,
+    @SlashOption({
+      description: "seconds",
+      name: "seconds",
+      required: true,
+      type: ApplicationCommandOptionType.Number,
+    })
+    seconds: number,
     interaction: CommandInteraction,
     client: Client
   ): Promise<void> {

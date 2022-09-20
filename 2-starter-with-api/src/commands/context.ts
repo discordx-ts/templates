@@ -15,10 +15,7 @@ export class Example {
     interaction.reply("I am user context handler");
   }
 
-  @ContextMenu({
-    name: "user context",
-    type: ApplicationCommandType.User,
-  })
+  @ContextMenu({ name: "user context", type: ApplicationCommandType.User })
   userHandler(interaction: UserContextMenuCommandInteraction): void {
     interaction.reply("I am user context handler");
   }

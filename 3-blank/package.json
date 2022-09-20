@@ -15,8 +15,7 @@
   "dependencies": {
     "@discordx/importer": "^1.1.10",
     "discord.js": "^14.3.0",
-    "discordx": "^11.2.0",
-    "reflect-metadata": "^0.1.13"
+    "discordx": "^11.3.0"
   },
   "devDependencies": {
     "@types/node": "^18.7.18",
