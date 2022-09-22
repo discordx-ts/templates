@@ -288,7 +288,7 @@ export class MyQueue extends Queue {
         )
         .join("\n\n");
 
-      return `${current}\n\`\`\`markdown\n${queue}\`\`\``;
+      return { content: `${current}\n\`\`\`markdown\n${queue}\`\`\`` };
     }, Math.round(this.size / 10));
 
     await new Pagination(interaction, pageOptions, {
