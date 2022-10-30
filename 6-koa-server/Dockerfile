@@ -17,7 +17,7 @@ COPY tsconfig.json   .
 # Build project
 RUN npm run build
 
-## producation runner
+## production runner
 FROM node:lts-alpine as prod-runner
 
 # Set work directory
