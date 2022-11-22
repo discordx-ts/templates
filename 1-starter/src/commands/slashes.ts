@@ -20,7 +20,7 @@ export class SlashExample {
         .setFooter({ text: `Page ${i + 1} of ${commands.length}` })
         .setTitle("**Slash command info**")
         .addFields({ name: "Name", value: cmd.name })
-        .addFields({ name: "Description", value: cmd.description.length > 0 ? cmd.description : "No description" });
+        .addFields({ name: "Description", value: cmd?.description?.length > 0 ? cmd.description : "No description" });
 
       return { embeds: [embed] };
     });
