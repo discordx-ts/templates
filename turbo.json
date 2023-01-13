@@ -1,0 +1,14 @@
+{
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**"]
+    },
+    "build:changelog": {
+      "dependsOn": ["^build:changelog"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
+    }
+  }
+}
