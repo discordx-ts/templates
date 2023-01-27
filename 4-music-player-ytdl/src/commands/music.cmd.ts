@@ -36,8 +36,8 @@ export class music {
     if (
       !queue.isReady ||
       !queue.voiceChannelId ||
-      (oldState.channelId != queue.voiceChannelId &&
-        newState.channelId != queue.voiceChannelId) ||
+      (oldState.channelId !== queue.voiceChannelId &&
+        newState.channelId !== queue.voiceChannelId) ||
       !queue.channel
     ) {
       return;
@@ -82,9 +82,7 @@ export class music {
     }
   }
 
-  validateControlInteraction(
-    interaction: CommandInteraction
-  ): MyQueue | undefined {
+  validateControlInteraction(interaction: CommandInteraction): MyQueue | null {
     if (
       !interaction.guild ||
       !interaction.channel ||
@@ -93,7 +91,7 @@ export class music {
       interaction.reply(
         "> Your request could not be processed, please try again later"
       );
-      return;
+      return null;
     }
 
     const queue = this.player.getQueue(interaction.guild, interaction.channel);
@@ -104,7 +102,7 @@ export class music {
       );
 
       setTimeout(() => interaction.deleteReply(), 15e3);
-      return;
+      return null;
     }
 
     return queue;
@@ -185,9 +183,19 @@ export class music {
     interaction.deleteReply();
   }
 
-  async processJoin(
-    interaction: CommandInteraction
-  ): Promise<MyQueue | undefined> {
+  @ButtonComponent({ id: "btn-loop" })
+  async loopControl(interaction: CommandInteraction): Promise<void> {
+    const queue = this.validateControlInteraction(interaction);
+
+    if (!queue) {
+      return;
+    }
+    queue.setLoop(!queue.loop);
+    await interaction.deferReply();
+    interaction.deleteReply();
+  }
+
+  async processJoin(interaction: CommandInteraction): Promise<MyQueue | null> {
     if (
       !interaction.guild ||
       !interaction.channel ||
@@ -198,7 +206,7 @@ export class music {
       );
 
       setTimeout(() => interaction.deleteReply(), 15e3);
-      return;
+      return null;
     }
 
     if (
@@ -208,7 +216,7 @@ export class music {
       interaction.reply("> You are not in the voice channel");
 
       setTimeout(() => interaction.deleteReply(), 15e3);
-      return;
+      return null;
     }
 
     await interaction.deferReply();
@@ -278,7 +286,7 @@ export class music {
 
   validateInteraction(
     interaction: CommandInteraction
-  ): undefined | { guild: Guild; member: GuildMember; queue: MyQueue } {
+  ): null | { guild: Guild; member: GuildMember; queue: MyQueue } {
     if (
       !interaction.guild ||
       !(interaction.member instanceof GuildMember) ||
@@ -289,7 +297,7 @@ export class music {
       );
 
       setTimeout(() => interaction.deleteReply(), 15e3);
-      return;
+      return null;
     }
 
     if (!interaction.member.voice.channel) {
@@ -298,7 +306,7 @@ export class music {
       );
 
       setTimeout(() => interaction.deleteReply(), 15e3);
-      return;
+      return null;
     }
 
     const queue = this.player.getQueue(interaction.guild, interaction.channel);
@@ -312,7 +320,7 @@ export class music {
       );
 
       setTimeout(() => interaction.deleteReply(), 15e3);
-      return;
+      return null;
     }
 
     return { guild: interaction.guild, member: interaction.member, queue };
