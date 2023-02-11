@@ -46,8 +46,8 @@ npx create-discordx
 
 # 🗂 Templates
 
-| Template                                             | From                                               |
-| ---------------------------------------------------- | -------------------------------------------------- |
+| Template                                             | From                                         |
+| ---------------------------------------------------- | -------------------------------------------- |
 | [1-starter](./1-starter)                             | [@samarmeena](https://github.com/samarmeena) |
 | [2-starter-with-api](./2-starter-with-api)           | [@samarmeena](https://github.com/samarmeena) |
 | [3-blank](./3-blank)                                 | [@samarmeena](https://github.com/samarmeena) |
