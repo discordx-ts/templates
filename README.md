@@ -20,9 +20,9 @@
         src="https://img.shields.io/npm/dt/discordx.svg?maxAge=3600"
         alt="NPM downloads"
     /></a>
-    <a href="https://github.com/oceanroleplay/discord.ts/actions"
+    <a href="https://github.com/discordx-ts/discordx/actions"
       ><img
-        src="https://github.com/oceanroleplay/discord.ts/workflows/Build/badge.svg"
+        src="https://github.com/discordx-ts/discordx/workflows/Build/badge.svg"
         alt="Build status"
     /></a>
     <a href="https://www.paypal.me/vijayxmeena"
@@ -48,24 +48,24 @@ npx create-discordx
 
 | Template                                             | From                                               |
 | ---------------------------------------------------- | -------------------------------------------------- |
-| [1-starter](./1-starter)                             | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [2-starter-with-api](./2-starter-with-api)           | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [3-blank](./3-blank)                                 | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [4-music-player-ytdl](./4-music-player-ytdl)         | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [5-music-player-lavalink](./5-music-player-lavalink) | [@oceanroleplay](https://github.com/oceanroleplay) |
-| [6-koa-server](./6-koa-server)                       | [@oceanroleplay](https://github.com/oceanroleplay) |
+| [1-starter](./1-starter)                             | [@samarmeena](https://github.com/samarmeena) |
+| [2-starter-with-api](./2-starter-with-api)           | [@samarmeena](https://github.com/samarmeena) |
+| [3-blank](./3-blank)                                 | [@samarmeena](https://github.com/samarmeena) |
+| [4-music-player-ytdl](./4-music-player-ytdl)         | [@samarmeena](https://github.com/samarmeena) |
+| [5-music-player-lavalink](./5-music-player-lavalink) | [@samarmeena](https://github.com/samarmeena) |
+| [6-koa-server](./6-koa-server)                       | [@samarmeena](https://github.com/samarmeena) |
 
 # 📜 Documentation
 
 - [discordx.js.org](https://discordx.js.org)
-- [Tutorials (dev.to)](https://dev.to/oceanroleplay/series/14317)
+- [Tutorials (dev.to)](https://dev.to/samarmeena/series/14317)
 
 # ☎️ Need help?
 
 - [Check frequently asked questions](https://discordx.js.org/docs/faq)
-- [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
+- [Check examples](https://github.com/discordx-ts/discordx/tree/main/packages/discordx/examples)
 - Ask in the community [Discord server](https://discordx.js.org/discord)
 
 # 💖 Thank you
 
-You can support [discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/oceanroleplay/discord.ts) star.
+You can support [discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/discordx-ts/discordx) star.

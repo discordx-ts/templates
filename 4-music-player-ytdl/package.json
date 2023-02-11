@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oceanroleplay/discord-music-bot.git"
+    "url": "git+https://github.com/samarmeena/discord-music-bot.git"
   },
   "keywords": [
     "discordx",
@@ -23,12 +23,12 @@
     "discord",
     "typescript"
   ],
-  "author": "Vijay Meena <indianoceanroleplay@gmail.com> [https://github.com/oceanroleplay]",
+  "author": "Vijay Meena <indianoceanroleplay@gmail.com> [https://github.com/samarmeena]",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oceanroleplay/discord-music-bot/issues"
+    "url": "https://github.com/samarmeena/discord-music-bot/issues"
   },
-  "homepage": "https://github.com/oceanroleplay/discord-music-bot#readme",
+  "homepage": "https://github.com/samarmeena/discord-music-bot#readme",
   "dependencies": {
     "@discordjs/opus": "^0.9.0",
     "@discordjs/voice": "^0.14.0",

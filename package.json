@@ -19,16 +19,16 @@
   ],
   "homepage": "https://discordx.js.org",
   "bugs": {
-    "url": "https://github.com/oceanroleplay/discord.ts/issue",
+    "url": "https://github.com/discordx-ts/templates/issue",
     "email": "indianoceanroleplay@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oceanroleplay/discord.ts"
+    "url": "https://github.com/discordx-ts/templates"
   },
   "license": "Apache-2.0",
   "contributors": [
-    "Vijay Meena <indianoceanroleplay@gmail.com> (https://github.com/oceanroleplay)"
+    "Vijay Meena <indianoceanroleplay@gmail.com> (https://github.com/samarmeena)"
   ],
   "scripts": {
     "build": "turbo run build --parallel",

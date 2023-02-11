@@ -20,9 +20,9 @@
         src="https://img.shields.io/npm/dt/discordx.svg?maxAge=3600"
         alt="NPM downloads"
     /></a>
-    <a href="https://github.com/oceanroleplay/discord.ts/actions"
+    <a href="https://github.com/discordx-ts/discordx/actions"
       ><img
-        src="https://github.com/oceanroleplay/discord.ts/workflows/Build/badge.svg"
+        src="https://github.com/discordx-ts/discordx/workflows/Build/badge.svg"
         alt="Build status"
     /></a>
     <a href="https://www.paypal.me/vijayxmeena"
@@ -86,14 +86,14 @@ For the full command list please view the [Docker Documentation](https://docs.do
 # 📜 Documentation
 
 - [discordx.js.org](https://discordx.js.org)
-- [Tutorials (dev.to)](https://dev.to/oceanroleplay/series/14317)
+- [Tutorials (dev.to)](https://dev.to/samarmeena/series/14317)
 
 # ☎️ Need help?
 
 - [Check frequently asked questions](https://discordx.js.org/docs/faq)
-- [Check examples](https://github.com/oceanroleplay/discord.ts/tree/main/packages/discordx/examples)
+- [Check examples](https://github.com/discordx-ts/discordx/tree/main/packages/discordx/examples)
 - Ask in the community [Discord server](https://discordx.js.org/discord)
 
 # 💖 Thank you
 
-You can support [discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/oceanroleplay/discord.ts) star.
+You can support [discordx](https://www.npmjs.com/package/discordx) by giving it a [GitHub](https://github.com/discordx-ts/discordx) star.
