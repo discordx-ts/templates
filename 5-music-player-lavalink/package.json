@@ -14,18 +14,16 @@
   },
   "dependencies": {
     "@discordx/importer": "^1.1.10",
-    "@discordx/lava-player": "^1.0.11",
-    "@discordx/lava-queue": "^1.1.1",
-    "@discordx/pagination": "^3.4.0",
+    "@discordx/plugin-lava-player": "^1.0.0",
     "discord.js": "^14.7.1",
-    "discordx": "^11.6.0"
+    "discordx": "^11.7.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.13.0",
     "nodemon": "^2.0.20",
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
-    "typescript": "4.9.4"
+    "typescript": "4.9.5"
   },
   "engines": {
     "node": ">=16.0.0",
