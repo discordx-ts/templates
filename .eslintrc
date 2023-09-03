@@ -43,7 +43,7 @@
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-use-before-define": "error",
     "@typescript-eslint/no-shadow": "error",
-    "@typescript-eslint/prefer-optional-chain": "error",
+    // "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/semi": "error",
     "@typescript-eslint/no-loss-of-precision": "error",
