@@ -21,7 +21,7 @@ export class Example {
     num1: number | undefined,
     @SimpleCommandOption({ name: "num2", type: SimpleCommandOptionType.Number })
     num2: number | undefined,
-    command: SimpleCommandMessage
+    command: SimpleCommandMessage,
   ): void {
     if (!num1 || !num2) {
       command.sendUsageSyntax();

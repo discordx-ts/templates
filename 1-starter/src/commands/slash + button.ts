@@ -24,7 +24,7 @@ export class Example {
       type: ApplicationCommandOptionType.User,
     })
     user: User | GuildMember | undefined,
-    interaction: CommandInteraction
+    interaction: CommandInteraction,
   ): Promise<void> {
     await interaction.deferReply();
 
@@ -36,7 +36,7 @@ export class Example {
 
     const row =
       new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
-        helloBtn
+        helloBtn,
       );
 
     interaction.editReply({

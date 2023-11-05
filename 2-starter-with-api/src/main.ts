@@ -60,7 +60,7 @@ async function run() {
 
   // The following syntax should be used in the ECMAScript environment
   await importx(
-    `${dirname(import.meta.url)}/{events,commands,api}/**/*.{ts,js}`
+    `${dirname(import.meta.url)}/{events,commands,api}/**/*.{ts,js}`,
   );
 
   // Let's start the bot

@@ -23,7 +23,7 @@ export class GroupExample {
       type: ApplicationCommandOptionType.Number,
     })
     y: number,
-    interaction: CommandInteraction
+    interaction: CommandInteraction,
   ): void {
     interaction.reply(String(x + y));
   }
@@ -45,7 +45,7 @@ export class GroupExample {
       type: ApplicationCommandOptionType.Number,
     })
     y: number,
-    interaction: CommandInteraction
+    interaction: CommandInteraction,
   ): void {
     interaction.reply(String(x * y));
   }
@@ -60,7 +60,7 @@ export class GroupExample {
       type: ApplicationCommandOptionType.String,
     })
     text: string,
-    interaction: CommandInteraction
+    interaction: CommandInteraction,
   ): void {
     interaction.reply(text);
   }

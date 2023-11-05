@@ -14,7 +14,7 @@ export class Example {
       type: ApplicationCommandOptionType.String,
     })
     what: string,
-    interaction: CommandInteraction
+    interaction: CommandInteraction,
   ): void {
     interaction.reply(what);
   }
@@ -30,7 +30,7 @@ export class Example {
       type: ApplicationCommandOptionType.String,
     })
     what: string,
-    interaction: CommandInteraction
+    interaction: CommandInteraction,
   ): void {
     interaction.reply(what);
   }
