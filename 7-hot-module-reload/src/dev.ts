@@ -59,8 +59,6 @@ async function run() {
   // Load commands
   await LoadFiles(importPattern);
 
-  console.log(DIService.engine.getAllServices().size);
-
   // Let's start the bot
   if (!process.env.BOT_TOKEN) {
     throw Error("Could not find BOT_TOKEN in your environment");
