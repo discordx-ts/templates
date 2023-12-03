@@ -22,6 +22,8 @@ export class API {
 
   @Get()
   guilds(context: Context): void {
-    context.body = `${bot.guilds.cache.map((g) => `${g.id}: ${g.name}\n`)}`;
+    context.body = `${bot.guilds.cache
+      .map((g) => `${g.id}: ${g.name}`)
+      .join("\n")}`;
   }
 }

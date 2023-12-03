@@ -11,12 +11,16 @@ export class Example {
     name: "message context",
     type: ApplicationCommandType.Message,
   })
-  messageHandler(interaction: MessageContextMenuCommandInteraction): void {
-    interaction.reply("I am user context handler");
+  async messageHandler(
+    interaction: MessageContextMenuCommandInteraction,
+  ): Promise<void> {
+    await interaction.reply("I am user context handler");
   }
 
   @ContextMenu({ name: "user context", type: ApplicationCommandType.User })
-  userHandler(interaction: UserContextMenuCommandInteraction): void {
-    interaction.reply("I am user context handler");
+  async userHandler(
+    interaction: UserContextMenuCommandInteraction,
+  ): Promise<void> {
+    await interaction.reply("I am user context handler");
   }
 }

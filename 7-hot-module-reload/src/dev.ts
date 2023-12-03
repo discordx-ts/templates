@@ -80,4 +80,6 @@ async function run() {
   }
 }
 
-run();
+run().catch((err) => {
+  throw err;
+});

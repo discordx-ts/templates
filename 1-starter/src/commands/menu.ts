@@ -19,7 +19,7 @@ export class Example {
     await interaction.deferReply();
 
     // extract selected value by member
-    const roleValue = interaction.values?.[0];
+    const roleValue = interaction.values[0];
 
     // if value not found
     if (!roleValue) {
@@ -50,7 +50,7 @@ export class Example {
       );
 
     // send it
-    interaction.editReply({
+    await interaction.editReply({
       components: [buttonRow],
       content: "select your role!",
     });

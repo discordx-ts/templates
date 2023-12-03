@@ -47,8 +47,8 @@ bot.on("interactionCreate", (interaction: Interaction) => {
   bot.executeInteraction(interaction);
 });
 
-bot.on("messageCreate", (message: Message) => {
-  bot.executeCommand(message);
+bot.on("messageCreate", async (message: Message) => {
+  await bot.executeCommand(message);
 });
 
 async function run() {
@@ -68,4 +68,6 @@ async function run() {
   await bot.login(process.env.BOT_TOKEN);
 }
 
-run();
+run().catch((err) => {
+  throw err;
+});

@@ -39,14 +39,14 @@ export class Example {
         helloBtn,
       );
 
-    interaction.editReply({
+    await interaction.editReply({
       components: [row],
-      content: `${user}, Say hello to bot`,
+      content: `${user?.toString()}, Say hello to bot`,
     });
   }
 
   @ButtonComponent({ id: "hello-btn" })
-  helloBtn(interaction: ButtonInteraction): void {
-    interaction.reply(`👋 ${interaction.member}`);
+  async helloBtn(interaction: ButtonInteraction): Promise<void> {
+    await interaction.reply(`👋 ${interaction.member?.toString()}`);
   }
 }

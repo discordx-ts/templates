@@ -19,4 +19,6 @@ async function run() {
   await bot.login(process.env.BOT_TOKEN);
 }
 
-run();
+run().catch((err) => {
+  throw err;
+});

@@ -47,6 +47,6 @@ bot.on("interactionCreate", (interaction: Interaction) => {
   bot.executeInteraction(interaction);
 });
 
-bot.on("messageCreate", (message: Message) => {
-  bot.executeCommand(message);
+bot.on("messageCreate", async (message: Message) => {
+  await bot.executeCommand(message);
 });

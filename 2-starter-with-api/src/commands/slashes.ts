@@ -12,7 +12,7 @@ export class SlashExample {
   })
   async pages(interaction: CommandInteraction): Promise<void> {
     const commands = MetadataStorage.instance.applicationCommands.map((cmd) => {
-      return { description: cmd?.description, name: cmd.name };
+      return { description: cmd.description, name: cmd.name };
     });
 
     const pages = commands.map((cmd, i) => {

@@ -5,7 +5,7 @@ import { Discord, Slash, SlashChoice, SlashOption } from "discordx";
 @Discord()
 export class Example {
   @Slash({ description: "choose" })
-  choose(
+  async choose(
     @SlashChoice("Human", "Astronaut", "Dev")
     @SlashOption({
       description: "What are you?",
@@ -15,12 +15,12 @@ export class Example {
     })
     what: string,
     interaction: CommandInteraction,
-  ): void {
-    interaction.reply(what);
+  ): Promise<void> {
+    await interaction.reply(what);
   }
 
   @Slash({ description: "choose1" })
-  choose1(
+  async choose1(
     @SlashChoice({ name: "are you okay?", value: "okay" })
     @SlashChoice({ name: "are you good?", value: "good" })
     @SlashOption({
@@ -31,7 +31,7 @@ export class Example {
     })
     what: string,
     interaction: CommandInteraction,
-  ): void {
-    interaction.reply(what);
+  ): Promise<void> {
+    await interaction.reply(what);
   }
 }

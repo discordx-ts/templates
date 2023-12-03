@@ -8,7 +8,7 @@ import { Discord, Slash, SlashGroup, SlashOption } from "discordx";
 export class GroupExample {
   @Slash({ description: "add" })
   @SlashGroup("maths", "testing")
-  add(
+  async add(
     @SlashOption({
       description: "x value",
       name: "x",
@@ -24,13 +24,13 @@ export class GroupExample {
     })
     y: number,
     interaction: CommandInteraction,
-  ): void {
-    interaction.reply(String(x + y));
+  ): Promise<void> {
+    await interaction.reply(String(x + y));
   }
 
   @Slash({ description: "multiply" })
   @SlashGroup("maths", "testing")
-  multiply(
+  async multiply(
     @SlashOption({
       description: "x value",
       name: "x",
@@ -46,13 +46,13 @@ export class GroupExample {
     })
     y: number,
     interaction: CommandInteraction,
-  ): void {
-    interaction.reply(String(x * y));
+  ): Promise<void> {
+    await interaction.reply(String(x * y));
   }
 
   @Slash({ description: "root" })
   @SlashGroup("testing")
-  root(
+  async root(
     @SlashOption({
       description: "text",
       name: "text",
@@ -61,7 +61,7 @@ export class GroupExample {
     })
     text: string,
     interaction: CommandInteraction,
-  ): void {
-    interaction.reply(text);
+  ): Promise<void> {
+    await interaction.reply(text);
   }
 }
