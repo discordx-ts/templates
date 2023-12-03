@@ -9,7 +9,7 @@ import { bot } from "./bot.js";
 
 // The following syntax should be used in the ECMAScript environment
 const importPattern = `${dirname(
-  import.meta.url
+  import.meta.url,
 )}/{events,commands}/**/*.{ts,js}`;
 
 /**
@@ -22,7 +22,7 @@ const importPattern = `${dirname(
 export async function LoadFiles(src: string): Promise<void> {
   const files = await resolve(src);
   await Promise.all(
-    files.map((file) => import(`${file}?version=${Date.now()}`))
+    files.map((file) => import(`${file}?version=${Date.now()}`)),
   );
 }
 
@@ -72,7 +72,7 @@ async function run() {
   // Hot Module reload
   if (process.env.NODE_ENV !== "production") {
     console.log(
-      "> Hot-Module-Reload enabled in development. Commands will automatically reload."
+      "> Hot-Module-Reload enabled in development. Commands will automatically reload.",
     );
 
     // Watch changed files using chikidar

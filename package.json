@@ -33,8 +33,8 @@
   "scripts": {
     "build": "turbo run build --parallel",
     "build:changelog": "npm run build:changelog:docs && turbo run build:changelog --parallel",
-    "format": "prettier --write .",
-    "format-check": "prettier --check .",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
     "lint": "eslint ./",
     "prepare": "npx is-ci || npx husky install",
     "test": "turbo run test --parallel"
