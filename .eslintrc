@@ -27,6 +27,7 @@
     "typescript-sort-keys/string-enum": "error",
 
     // typescript-eslint
+    "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/quotes": ["error", "double", { "avoidEscape": true }],
     "@typescript-eslint/no-misused-promises": [
       "error",
