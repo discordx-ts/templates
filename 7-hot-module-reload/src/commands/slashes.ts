@@ -5,6 +5,6 @@ import { Discord, Slash } from "discordx";
 export class Example {
   @Slash({ description: "ping" })
   async ping(interaction: CommandInteraction): Promise<void> {
-    await interaction.reply("pong! hola!");
+    await interaction.reply("pong!");
   }
 }
