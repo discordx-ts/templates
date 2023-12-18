@@ -89,6 +89,4 @@ async function run() {
   // ************* rest api section: end **********
 }
 
-run().catch((err) => {
-  throw err;
-});
+void run();

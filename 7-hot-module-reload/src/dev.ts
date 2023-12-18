@@ -80,6 +80,4 @@ async function run() {
   }
 }
 
-run().catch((err) => {
-  throw err;
-});
+void run();
