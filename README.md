@@ -49,8 +49,8 @@ npx create-discordx
 | Template                                             | From                                         |
 | ---------------------------------------------------- | -------------------------------------------- |
 | [1-starter](./1-starter)                             | [@samarmeena](https://github.com/samarmeena) |
-| [2-starter-with-api](./2-blank)                      | [@samarmeena](https://github.com/samarmeena) |
-| [3-blank](./3-hot-module-reload)                     | [@samarmeena](https://github.com/samarmeena) |
+| [2-blank](./2-blank)                                 | [@samarmeena](https://github.com/samarmeena) |
+| [3-hot-module-reload](./3-hot-module-reload)         | [@samarmeena](https://github.com/samarmeena) |
 | [4-music-player-ytdl](./4-music-player-ytdl)         | [@samarmeena](https://github.com/samarmeena) |
 | [5-music-player-lavalink](./5-music-player-lavalink) | [@samarmeena](https://github.com/samarmeena) |
 
