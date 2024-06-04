@@ -22,7 +22,7 @@ const importPattern = `${dirname(
 export async function LoadFiles(src: string): Promise<void> {
   const files = await resolve(src);
   await Promise.all(
-    files.map((file) => import(`${file}?version=${Date.now()}`)),
+    files.map((file) => import(`${file}?version=${Date.now().toString()}`)),
   );
 }
 

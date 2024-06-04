@@ -1,7 +1,6 @@
 import type {
   ButtonInteraction,
   CommandInteraction,
-  GuildMember,
   MessageActionRowComponentBuilder,
   User,
 } from "discord.js";
@@ -10,6 +9,7 @@ import {
   ApplicationCommandOptionType,
   ButtonBuilder,
   ButtonStyle,
+  GuildMember,
 } from "discord.js";
 import { ButtonComponent, Discord, Slash, SlashOption } from "discordx";
 
@@ -26,6 +26,10 @@ export class Example {
     user: User | GuildMember | undefined,
     interaction: CommandInteraction,
   ): Promise<void> {
+    if (!user) {
+      return;
+    }
+
     await interaction.deferReply();
 
     const helloBtn = new ButtonBuilder()
@@ -41,12 +45,16 @@ export class Example {
 
     await interaction.editReply({
       components: [row],
-      content: `${user?.toString()}, Say hello to bot`,
+      content: `${user.toString()}, Say hello to bot`,
     });
   }
 
   @ButtonComponent({ id: "hello-btn" })
   async helloBtn(interaction: ButtonInteraction): Promise<void> {
-    await interaction.reply(`👋 ${interaction.member?.toString()}`);
+    if (!(interaction.member instanceof GuildMember)) {
+      return;
+    }
+
+    await interaction.reply(`👋 ${interaction.member.toString()}`);
   }
 }

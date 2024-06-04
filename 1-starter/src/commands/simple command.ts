@@ -12,7 +12,12 @@ import {
 export class Example {
   @SimpleCommand({ aliases: ["hi"] })
   async hello(command: SimpleCommandMessage): Promise<void> {
-    await command.message.reply(`👋 ${command.message.member?.toString()}`);
+    const member = command.message.member;
+    if (member) {
+      await command.message.reply(`👋 ${member.toString()}`);
+    } else {
+      await command.message.reply("👋 hello");
+    }
   }
 
   @SimpleCommand({ argSplitter: "+" })
@@ -28,7 +33,7 @@ export class Example {
       return;
     }
 
-    await command.message.reply(`total = ${num1 + num2}`);
+    await command.message.reply(`total = ${String(num1 + num2)}`);
   }
 
   // make single handler for simple and slash command
