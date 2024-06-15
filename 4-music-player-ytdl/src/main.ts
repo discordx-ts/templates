@@ -1,12 +1,9 @@
+import "@discordx/plugin-ytdl-player";
+
 import { dirname, importx } from "@discordx/importer";
-import { YTDLPlayerPlugin } from "@discordx/plugin-ytdl-player";
 import type { Interaction, Message } from "discord.js";
 import { IntentsBitField } from "discord.js";
-import { Client, MetadataStorage } from "discordx";
-
-const ytdlPlayerPlugin = new YTDLPlayerPlugin({
-  metadata: MetadataStorage.instance,
-});
+import { Client } from "discordx";
 
 export const bot = new Client({
   // To use only guild command
@@ -21,9 +18,6 @@ export const bot = new Client({
     IntentsBitField.Flags.GuildVoiceStates,
   ],
 
-  // plugins
-  plugins: [ytdlPlayerPlugin],
-
   // Debug logs are disabled in silent mode
   silent: false,
 
@@ -33,12 +27,12 @@ export const bot = new Client({
   },
 });
 
-bot.once("ready", async () => {
+bot.once("ready", () => {
   // Make sure all guilds are cached
   // await bot.guilds.fetch();
 
   // Synchronize applications commands with Discord
-  await bot.initApplicationCommands();
+  void bot.initApplicationCommands();
 
   // To clear all guild commands, uncomment this line,
   // This is useful when moving from guild commands to global commands
@@ -55,8 +49,8 @@ bot.on("interactionCreate", (interaction: Interaction) => {
   bot.executeInteraction(interaction);
 });
 
-bot.on("messageCreate", async (message: Message) => {
-  await bot.executeCommand(message);
+bot.on("messageCreate", (message: Message) => {
+  void bot.executeCommand(message);
 });
 
 async function run() {

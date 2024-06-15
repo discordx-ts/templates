@@ -6,14 +6,28 @@ networks:
 
 services:
   lavalink:
-    image: fredboat/lavalink
+    # pin the image version to Lavalink v4
+    image: ghcr.io/lavalink-devs/lavalink:4
+    container_name: lavalink
+    restart: unless-stopped
+    environment:
+      # set Java options here
+      - _JAVA_OPTIONS=-Xmx6G
+      # set lavalink server port
+      - SERVER_PORT=2333
+      # set password for lavalink
+      - LAVALINK_SERVER_PASSWORD=youshallnotpass
     volumes:
+      # mount application.yml from the same directory or use environment variables
       - ./application.yml:/opt/Lavalink/application.yml
-    expose:
-      - 2333
-      - 2333/udp
     networks:
       - discordx-network
+    expose:
+      # lavalink exposes port 2333 to connect to for other containers (this is for documentation purposes only)
+      - 2333
+    ports:
+      # you only need this if you want to make your lavalink accessible from outside of containers
+      - "2333:2333"
 
   app:
     depends_on:

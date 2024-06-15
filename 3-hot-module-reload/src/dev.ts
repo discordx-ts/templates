@@ -74,9 +74,9 @@ async function run() {
     );
 
     // Watch changed files using chikidar
-    watcher.on("add", Reload);
-    watcher.on("change", Reload);
-    watcher.on("unlink", Reload);
+    watcher.on("add", () => void Reload());
+    watcher.on("change", () => void Reload());
+    watcher.on("unlink", () => void Reload());
   }
 }
 

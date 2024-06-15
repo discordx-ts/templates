@@ -15,7 +15,7 @@ const roles = [
 @Discord()
 export class Example {
   @SelectMenuComponent({ id: "role-menu" })
-  async handle(interaction: StringSelectMenuInteraction): Promise<unknown> {
+  async handle(interaction: StringSelectMenuInteraction): Promise<void> {
     await interaction.deferReply();
 
     // extract selected value by member
@@ -23,7 +23,8 @@ export class Example {
 
     // if value not found
     if (!roleValue) {
-      return interaction.followUp("invalid role id, select again");
+      await interaction.followUp("invalid role id, select again");
+      return;
     }
 
     await interaction.followUp(
@@ -31,7 +32,6 @@ export class Example {
         roles.find((r) => r.value === roleValue)?.label ?? "unknown"
       }`,
     );
-    return;
   }
 
   @Slash({ description: "roles menu", name: "my_roles" })
