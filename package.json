@@ -2,6 +2,7 @@
   "name": "discordx",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "npm@7.0.0",
   "workspaces": [
     "**/*"
   ],
@@ -32,7 +33,6 @@
   ],
   "scripts": {
     "build": "turbo run build --parallel",
-    "build:changelog": "npm run build:changelog:docs && turbo run build:changelog --parallel",
     "fix:prettier": "prettier --write .",
     "prettier": "prettier --check .",
     "lint": "eslint ./",

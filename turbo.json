@@ -1,14 +1,9 @@
 {
-  "pipeline": {
+  "$schema": "https://turborepo.org/schema.json",
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["build/**"]
-    },
-    "build:changelog": {
-      "dependsOn": ["^build:changelog"]
-    },
-    "test": {
-      "dependsOn": ["^test"]
     }
   }
 }
