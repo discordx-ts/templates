@@ -24,7 +24,7 @@ export class SlashExample {
         .addFields({ name: "Name", value: cmd.name })
         .addFields({
           name: "Description",
-          value: cmd.description,
+          value: cmd.description.length ? cmd.description : "-",
         });
 
       return { embeds: [embed] };
