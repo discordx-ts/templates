@@ -13,15 +13,15 @@
   },
   "dependencies": {
     "@discordx/importer": "^1.3.1",
-    "discord.js": "^14.15.3",
-    "discordx": "^11.11.1"
+    "discord.js": "^14.17.3",
+    "discordx": "^11.12.2"
   },
   "devDependencies": {
-    "@types/node": "^20.14.4",
-    "nodemon": "^3.1.3",
-    "prettier": "^3.3.2",
+    "@types/node": "^22.10.10",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
-    "typescript": "5.4.5"
+    "typescript": "5.7.3"
   },
   "engines": {
     "node": ">=16.0.0",
