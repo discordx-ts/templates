@@ -46,18 +46,18 @@ npx create-discordx
 
 # 🗂 Templates
 
-| Template                                             | From                                         |
-| ---------------------------------------------------- | -------------------------------------------- |
-| [1-starter](./1-starter)                             | [@samarmeena](https://github.com/samarmeena) |
-| [2-blank](./2-blank)                                 | [@samarmeena](https://github.com/samarmeena) |
-| [3-hot-module-reload](./3-hot-module-reload)         | [@samarmeena](https://github.com/samarmeena) |
-| [4-music-player-ytdl](./4-music-player-ytdl)         | [@samarmeena](https://github.com/samarmeena) |
-| [5-music-player-lavalink](./5-music-player-lavalink) | [@samarmeena](https://github.com/samarmeena) |
+| Template                                             | From                                             |
+| ---------------------------------------------------- | ------------------------------------------------ |
+| [1-starter](./1-starter)                             | [@vijayymmeena](https://github.com/vijayymmeena) |
+| [2-blank](./2-blank)                                 | [@vijayymmeena](https://github.com/vijayymmeena) |
+| [3-hot-module-reload](./3-hot-module-reload)         | [@vijayymmeena](https://github.com/vijayymmeena) |
+| [4-music-player-ytdl](./4-music-player-ytdl)         | [@vijayymmeena](https://github.com/vijayymmeena) |
+| [5-music-player-lavalink](./5-music-player-lavalink) | [@vijayymmeena](https://github.com/vijayymmeena) |
 
 # 📜 Documentation
 
 - [discordx.js.org](https://discordx.js.org)
-- [Tutorials (dev.to)](https://dev.to/samarmeena/series/14317)
+- [Tutorials (dev.to)](https://dev.to/vijayymmeena/series/14317)
 
 # ☎️ Need help?
 

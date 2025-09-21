@@ -1,33 +1,16 @@
 {
   "name": "4-music-player-ytdl",
   "version": "1.0.0",
-  "description": "Example of music bot with discordx",
-  "main": "build/main.js",
+  "private": true,
+  "license": "MIT",
   "type": "module",
+  "main": "build/main.js",
   "scripts": {
     "build": "tsc",
     "dev": "node --loader ts-node/esm/transpile-only src/main.ts",
     "start": "node build/main.js",
     "watch": "nodemon --exec npm run dev --watch src --ext ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samarmeena/discord-music-bot.git"
-  },
-  "keywords": [
-    "discordx",
-    "discord.ts",
-    "discord.js",
-    "bot",
-    "discord",
-    "typescript"
-  ],
-  "author": "Vijay Meena <indianoceanroleplay@gmail.com> [https://github.com/samarmeena]",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/samarmeena/discord-music-bot/issues"
-  },
-  "homepage": "https://github.com/samarmeena/discord-music-bot#readme",
   "dependencies": {
     "@discordx/importer": "^1.3.3",
     "@discordx/plugin-ytdl-player": "^2.3.10",
@@ -40,5 +23,9 @@
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   }
 }
