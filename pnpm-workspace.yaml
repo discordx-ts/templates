@@ -5,6 +5,11 @@ packages:
   - 4-music-player-ytdl
   - 5-music-player-lavalink
 
+minimumReleaseAgeExclude:
+  - "@discordx/*"
+  - discordx
+
 onlyBuiltDependencies:
+  - esbuild
   - "@discordjs/opus"
   - ffmpeg-static
