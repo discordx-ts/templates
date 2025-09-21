@@ -1,5 +1,4 @@
-import type { Interaction, Message } from "discord.js";
-import { IntentsBitField } from "discord.js";
+import { IntentsBitField, type Interaction, type Message } from "discord.js";
 import { Client } from "discordx";
 
 export const bot = new Client({

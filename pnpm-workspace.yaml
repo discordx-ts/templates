@@ -1,0 +1,10 @@
+packages:
+  - 1-starter
+  - 2-blank
+  - 3-hot-module-reload
+  - 4-music-player-ytdl
+  - 5-music-player-lavalink
+
+onlyBuiltDependencies:
+  - "@discordjs/opus"
+  - ffmpeg-static

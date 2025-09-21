@@ -14,16 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code 🛎
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@master
 
       - name: Install Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@main
         with:
-          cache: "npm"
-          node-version: "lts/*"
+          node-version: 22
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Run prettier
         run: npm run prettier

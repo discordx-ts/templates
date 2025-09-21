@@ -1,15 +1,13 @@
-import type {
-  ButtonInteraction,
-  CommandInteraction,
-  MessageActionRowComponentBuilder,
-  User,
-} from "discord.js";
 import {
   ActionRowBuilder,
   ApplicationCommandOptionType,
   ButtonBuilder,
   ButtonStyle,
   GuildMember,
+  type ButtonInteraction,
+  type CommandInteraction,
+  type MessageActionRowComponentBuilder,
+  type User,
 } from "discord.js";
 import { ButtonComponent, Discord, Slash, SlashOption } from "discordx";
 

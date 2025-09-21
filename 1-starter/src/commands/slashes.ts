@@ -1,6 +1,5 @@
 import { Pagination } from "@discordx/pagination";
-import type { CommandInteraction } from "discord.js";
-import { EmbedBuilder } from "discord.js";
+import { EmbedBuilder, type CommandInteraction } from "discord.js";
 import { Discord, MetadataStorage, Slash } from "discordx";
 
 @Discord()

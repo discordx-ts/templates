@@ -1,11 +1,11 @@
 import type { CommandInteraction, Message } from "discord.js";
-import type { SimpleCommandMessage } from "discordx";
 import {
   Discord,
   SimpleCommand,
   SimpleCommandOption,
   SimpleCommandOptionType,
   Slash,
+  type SimpleCommandMessage,
 } from "discordx";
 
 @Discord()

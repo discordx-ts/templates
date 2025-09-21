@@ -1,9 +1,10 @@
-import type {
-  CommandInteraction,
-  MessageActionRowComponentBuilder,
-  StringSelectMenuInteraction,
+import {
+  ActionRowBuilder,
+  StringSelectMenuBuilder,
+  type CommandInteraction,
+  type MessageActionRowComponentBuilder,
+  type StringSelectMenuInteraction,
 } from "discord.js";
-import { ActionRowBuilder, StringSelectMenuBuilder } from "discord.js";
 import { Discord, SelectMenuComponent, Slash } from "discordx";
 
 const roles = [
