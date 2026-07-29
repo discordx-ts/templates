@@ -2,7 +2,6 @@
   "name": "discordx",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef",
   "description": "Create a discord bot with TypeScript and Decorators!",
   "keywords": [
     "typescript",
@@ -29,28 +28,21 @@
     "Vijay Meena <vijayymmeena@gmail.com> (https://github.com/vijayymmeena)"
   ],
   "scripts": {
-    "build": "turbo run build --parallel",
-    "format": "prettier --write .",
-    "prettier": "prettier --check .",
-    "lint": "eslint .",
-    "prepare": "is-ci || husky install",
-    "test": "turbo run test --parallel"
+    "build": "turbo run build",
+    "check": "biome check",
+    "fix": "biome check --write",
+    "prepare": "is-ci || husky install"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-angular": "^19.8.1",
-    "@eslint/js": "^9.35.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
-    "eslint": "^9.35.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
+    "@biomejs/biome": "^2.5.6",
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-angular": "^21.2.0",
     "husky": "^9.1.7",
     "is-ci": "^4.1.0",
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.6",
-    "typescript": "5.9.2",
-    "typescript-eslint": "^8.43.0"
+    "turbo": "^2.10.7",
+    "typescript": "7.0.2"
   },
+  "packageManager": "pnpm@11.17.0",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=7.0.0"

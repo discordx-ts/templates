@@ -47,12 +47,6 @@ npm install
 npm run dev
 ```
 
-If you want to use [Nodemon](https://nodemon.io/) to auto-reload while in development:
-
-```
-npm run watch
-```
-
 # 💻 Production
 
 ```

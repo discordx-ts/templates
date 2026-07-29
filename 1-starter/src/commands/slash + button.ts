@@ -2,10 +2,10 @@ import {
   ActionRowBuilder,
   ApplicationCommandOptionType,
   ButtonBuilder,
-  ButtonStyle,
-  GuildMember,
   type ButtonInteraction,
+  ButtonStyle,
   type CommandInteraction,
+  GuildMember,
   type MessageActionRowComponentBuilder,
   type User,
 } from "discord.js";

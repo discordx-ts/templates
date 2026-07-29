@@ -1,4 +1,4 @@
-import { Discord, On, type ArgsOf } from "discordx";
+import { type ArgsOf, Discord, On } from "discordx";
 
 @Discord()
 export class Example {

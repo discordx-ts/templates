@@ -28,11 +28,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run prettier
-        run: pnpm prettier
+      - name: Run check
+        run: pnpm check
 
-      - name: Run ESLint
-        run: pnpm lint
-
-      - name: Build
+      - name: Run build
         run: pnpm build
