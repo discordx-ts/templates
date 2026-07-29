@@ -1,7 +1,12 @@
 import "@discordx/plugin-ytdl-player";
 
 import { dirname, importx } from "@discordx/importer";
-import { IntentsBitField, type Interaction, type Message } from "discord.js";
+import {
+  Events,
+  IntentsBitField,
+  type Interaction,
+  type Message,
+} from "discord.js";
 import { Client } from "discordx";
 
 export const bot = new Client({
@@ -26,7 +31,7 @@ export const bot = new Client({
   },
 });
 
-bot.once("ready", () => {
+bot.once(Events.ClientReady, () => {
   // Make sure all guilds are cached
   // await bot.guilds.fetch();
 
